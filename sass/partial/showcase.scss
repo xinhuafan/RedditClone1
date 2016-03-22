@@ -1,0 +1,49 @@
+@import "compass";
+//variables
+$showcase-margin: 5%;
+
+$showcase-item-width: 15em;
+$showcase-border-radius: 0.4em;
+
+
+//for show case
+.showcase{
+  width: 60%;
+  @include display-flex;
+  @include flex-direction(row);
+  flex-wrap: wrap;
+  padding-left: 2em;
+}
+
+.list_display{
+  @include flex-direction(column);
+}
+
+
+//for showcase item
+.showcase_item{
+  //TODO showcase item
+
+}
+
+.square{
+  width: $showcase-item-width;
+  height: $showcase-item-width;
+  padding: 2em;
+  background-color: white;
+  //@include border-radius($showcase-border-radius);
+  margin-right: 0.4em;
+  box-shadow: inset 0px -27px 88px 27px rgba(204,204,204,0.23);
+  h1{
+    font-size: 1.4em;
+  }
+}
+
+.vertical_list_item{
+  width: 100%
+
+}
+.entry_info{
+  display: flex;
+  flex-direction: row;
+}

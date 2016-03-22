@@ -1,0 +1,16 @@
+@import "compass";
+//variables
+$buttons-border-radius: 0.4em;
+$button-height: 1.4em;
+$button-padding-horizontal: 0.3em;
+$button-padding-vertical: 0.2em;
+$button-font-size: 1.2em;
+
+//style
+.button{
+  @include border-radius($buttons-border-radius);
+}
+
+button{
+  @extend .button;
+}

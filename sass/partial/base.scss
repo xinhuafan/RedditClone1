@@ -1,0 +1,24 @@
+
+//variables
+
+//gobal style
+body{
+  background-color: #f2f1f4;
+}
+
+//include all other
+@import "showcase";
+@import "buttons";
+@import "user_bar";
+
+
+.main_chunck{
+  display: flex;
+  flex-direction: column;
+}
+
+.filter_control{
+  .filter_button{
+    padding: 0.6em 1.2em;
+  }
+}
