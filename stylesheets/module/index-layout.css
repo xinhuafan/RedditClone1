@@ -5,7 +5,7 @@ ul.filter_control {
 }
 /* line 5, ../../sass/module/index-layout.scss */
 ul.filter_control li.filter_button {
-  background-color: #c9302c;
+  background-color: #e7fff3;
 }
 
 /* line 10, ../../sass/module/index-layout.scss */
@@ -13,4 +13,5 @@ ul.filter_control li.filter_button {
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
 }

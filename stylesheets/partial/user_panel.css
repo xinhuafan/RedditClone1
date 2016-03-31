@@ -1,0 +1,14 @@
+/* line 3, ../../sass/partial/user_panel.scss */
+.user_panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 20em;
+  background-color: white;
+  padding-left: 0.5em;
+}
+/* line 9, ../../sass/partial/user_panel.scss */
+.user_panel button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

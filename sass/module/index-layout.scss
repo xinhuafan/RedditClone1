@@ -4,11 +4,12 @@ ul.filter_control{
   //list-style: none;
   li.filter_button{
     //list-style: none;
-    background-color: #c9302c;
+    background-color: #e7fff3;
   }
 }
 .main_chunck{
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
 }

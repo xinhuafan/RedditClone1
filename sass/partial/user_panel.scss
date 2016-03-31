@@ -1,0 +1,14 @@
+$min-width: 20em;
+
+.user_panel{
+  display: flex;
+  flex-direction: column;
+  min-width: $min-width;
+  background-color: white;
+  padding-left: 0.5em;
+  button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}

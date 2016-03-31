@@ -1,21 +1,22 @@
 /* line 10, ../../sass/partial/showcase.scss */
-.showcase {
-  width: 60%;
-  display: -webkit-flex;
+.showcase_section {
+  width: 70%;
   display: flex;
-  -webkit-flex-direction: row;
   flex-direction: row;
   flex-wrap: wrap;
   padding-left: 2em;
+  margin-right: 0;
+  align-content: flex-start;
+  flex-wrap: wrap;
 }
 
-/* line 18, ../../sass/partial/showcase.scss */
+/* line 23, ../../sass/partial/showcase.scss */
 .list_display {
   -webkit-flex-direction: column;
   flex-direction: column;
 }
 
-/* line 29, ../../sass/partial/showcase.scss */
+/* line 34, ../../sass/partial/showcase.scss */
 .square {
   width: 15em;
   height: 15em;
@@ -24,17 +25,17 @@
   margin-right: 0.4em;
   box-shadow: inset 0px -27px 88px 27px rgba(204, 204, 204, 0.23);
 }
-/* line 37, ../../sass/partial/showcase.scss */
+/* line 42, ../../sass/partial/showcase.scss */
 .square h1 {
   font-size: 1.4em;
 }
 
-/* line 42, ../../sass/partial/showcase.scss */
+/* line 47, ../../sass/partial/showcase.scss */
 .vertical_list_item {
   width: 100%;
 }
 
-/* line 46, ../../sass/partial/showcase.scss */
+/* line 51, ../../sass/partial/showcase.scss */
 .entry_info {
   display: flex;
   flex-direction: row;

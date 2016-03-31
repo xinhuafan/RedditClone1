@@ -7,12 +7,17 @@ $showcase-border-radius: 0.4em;
 
 
 //for show case
-.showcase{
-  width: 60%;
-  @include display-flex;
-  @include flex-direction(row);
+.showcase_section{
+  width: 70%;
+  //@include display-flex;
+  //@include flex-direction(row);
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   padding-left: 2em;
+  margin-right: 0;
+  align-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .list_display{
