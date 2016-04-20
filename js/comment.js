@@ -71,15 +71,7 @@ function pastTime(old_time, current_time){
 }
 
 //
-$("button.edit_button").click(function(){
-    $(".comment-view").css("display", "none");
-    $(".edit-view").css("display", "flex");
-})
 
-$("button.submit_change").click(function(){
-    $(".comment-view").css("display", "block");
-    $(".edit-view").css("display", "none");
-})
 
 function user_info_viewmodel(user_name){
     this._current_user = user_name;
@@ -183,13 +175,7 @@ comment_viewmodel.prototype = {
 
 //ko.applyBindings(new comment_model("john smith", "none", 2, false, false, "something you know"));
 
-$("a#filter").click(function(){
-    $(".filter-types").toggle();
-})
 
-$("a#sort").click(function(){
-    $(".sort-types").toggle();
-})
 
 function toggleSortingOrder(icon){
     if(icon.hasClass("fa-sort-amount-desc")){
@@ -222,6 +208,25 @@ function update(message){
 
 
 $(document).ready(function(){
+
+    $("button.edit_button").click(function(){
+        $(".comment-view").css("display", "none");
+        $(".edit-view").css("display", "flex");
+    })
+
+    $("button.submit_change").click(function(){
+        $(".comment-view").css("display", "block");
+        $(".edit-view").css("display", "none");
+    })
+
+    $("a#filter").click(function(){
+        $(".filter-types").toggle();
+    })
+
+    $("a#sort").click(function(){
+        $(".sort-types").toggle();
+    })
+
     var comment_list = [];
     var comment1 = new comment_viewmodel("mary Sue",undefined, 0, false, false, "hahaha");
     var comment2 = new comment_viewmodel("John Doe",undefined, 1, false, false, "Any way");
