@@ -1,14 +1,60 @@
-$min-width: 20em;
+$user-bar-height: 3em;
 
-.user_panel{
-  display: flex;
-  flex-direction: column;
-  min-width: $min-width;
-  background-color: white;
-  padding-left: 0.5em;
-  button{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+$user-button-height: 2em;
+$user-button-padding: 0.6em;
+$user-button-color: #5c6bc0;
+$user-button-border-radius: 4px;
+
+$avatar-size: 2.4em;
+
+//style
+.user-bar {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 2em;
+  padding-right: 2em;
+  box-shadow: 0px 2px 4px 1px rgba(10, 10, 10, 0.5);
+  * {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  button {
+    box-sizing: border-box;
+    height: $user-button-height;
+    padding-left: $user-button-padding;
+    padding-right: $user-button-padding;
+    background: $user-button-color;
+    border-radius: $user-button-border-radius;
+    color: white;
+    border: none;
+  }
+}
+
+//
+.guest {
+  .head {
+    .id {}
+  }
+  .end {}
+}
+
+.user {
+  .head {
+    .avatar {
+      width: $avatar-size;
+      height: $avatar-size;
+      background: black;
+      margin-right: 1em;
+    }
+  }
+}
+
+.end {
+  .button-set {
+    button {
+      margin-right: 1em;
+    }
   }
 }

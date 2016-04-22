@@ -1,40 +1,16 @@
 //
    Created by Qiushuo on 4/20/2016.
 
-section#main_pade
-    .ultility-bar
-        .container
-            ul.filters
-                li#Hottest
-                    a
-                        i.fa.fa-fire
-                        p Hottest
-                li#Lastest
-                    a
-                        i.fa.fa-clock-o
-                        p Latest
-                li#Replied
-                    a
-                        i.fa.fa-commenting-o
-                        p Replied
-                li#Recommented
-                    a
-                        i.fa.fa-heart
-                        p Recommented
-            a.addThread
-                i.fa.fa-plus.fa-2x
-                .createThread
-                    h3 create new thread
-                    p title
-                    input
-                    p content
-                    textarea
-    .showcase
-        .showcase-item
-            .head_up
-                h2 something
-                p by someone
-            p other
-            .thread-info
-                p replies
-                p comments
+doctype
+html
+    head
+        meta(charset="UTF-8")
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css")
+        link(href="stylesheets/style.css", rel="stylesheet")
+
+        script(src ="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js" type ="text/javascript")
+        script(src ="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js" type ="text/javascript")
+        script(src = "js/index.js" type ="text/javascript")
+    body
+        include jade-snippet/user_panel
+        include jade-snippet/showcase_section

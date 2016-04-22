@@ -2152,7 +2152,7 @@ ol ol {
   margin-left: -5px;
 }
 /* line 177, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_type.scss */
-.list-inline > li {
+.list-inline > li, section#main_pade .ultility-bar ul.filters .list-inline > li.active-filter {
   display: inline-block;
   padding-left: 5px;
   padding-right: 5px;
@@ -4911,7 +4911,7 @@ tbody.collapse.in {
   background-color: #e5e5e5;
 }
 /* line 65, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_dropdowns.scss */
-.dropdown-menu > li > a {
+.dropdown-menu > li > a, section#main_pade .ultility-bar ul.filters .dropdown-menu > li.active-filter > a {
   display: block;
   padding: 3px 20px;
   clear: both;
@@ -4922,7 +4922,7 @@ tbody.collapse.in {
 }
 
 /* line 78, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_dropdowns.scss */
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+.dropdown-menu > li > a:hover, section#main_pade .ultility-bar ul.filters .dropdown-menu > li.active-filter > a:hover, .dropdown-menu > li > a:focus, section#main_pade .ultility-bar ul.filters .dropdown-menu > li.active-filter > a:focus {
   text-decoration: none;
   color: #262626;
   background-color: #f5f5f5;
@@ -5431,27 +5431,27 @@ tbody.collapse.in {
   clear: both;
 }
 /* line 15, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-.nav > li {
+.nav > li, section#main_pade .ultility-bar ul.filters .nav > li.active-filter {
   position: relative;
   display: block;
 }
 /* line 19, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-.nav > li > a {
+.nav > li > a, section#main_pade .ultility-bar ul.filters .nav > li.active-filter > a {
   position: relative;
   display: block;
   padding: 10px 15px;
 }
 /* line 23, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-.nav > li > a:hover, .nav > li > a:focus {
+.nav > li > a:hover, section#main_pade .ultility-bar ul.filters .nav > li.active-filter > a:hover, .nav > li > a:focus, section#main_pade .ultility-bar ul.filters .nav > li.active-filter > a:focus {
   text-decoration: none;
   background-color: #eeeeee;
 }
 /* line 31, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-.nav > li.disabled > a {
+.nav > li.disabled > a, section#main_pade .ultility-bar ul.filters .nav > li.disabled.active-filter > a {
   color: #777777;
 }
 /* line 34, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-.nav > li.disabled > a:hover, .nav > li.disabled > a:focus {
+.nav > li.disabled > a:hover, section#main_pade .ultility-bar ul.filters .nav > li.disabled.active-filter > a:hover, .nav > li.disabled > a:focus, section#main_pade .ultility-bar ul.filters .nav > li.disabled.active-filter > a:focus {
   color: #777777;
   text-decoration: none;
   background-color: transparent;
@@ -5470,7 +5470,7 @@ tbody.collapse.in {
   background-color: #e5e5e5;
 }
 /* line 66, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-.nav > li > a > img {
+.nav > li > a > img, section#main_pade .ultility-bar ul.filters .nav > li.active-filter > a > img {
   max-width: none;
 }
 
@@ -5479,23 +5479,23 @@ tbody.collapse.in {
   border-bottom: 1px solid #ddd;
 }
 /* line 78, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-.nav-tabs > li {
+.nav-tabs > li, section#main_pade .ultility-bar ul.filters .nav-tabs > li.active-filter {
   float: left;
   margin-bottom: -1px;
 }
 /* line 84, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-.nav-tabs > li > a {
+.nav-tabs > li > a, section#main_pade .ultility-bar ul.filters .nav-tabs > li.active-filter > a {
   margin-right: 2px;
   line-height: 1.42857143;
   border: 1px solid transparent;
   border-radius: 4px 4px 0 0;
 }
 /* line 89, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-.nav-tabs > li > a:hover {
+.nav-tabs > li > a:hover, section#main_pade .ultility-bar ul.filters .nav-tabs > li.active-filter > a:hover {
   border-color: #eeeeee #eeeeee #ddd;
 }
 /* line 96, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+.nav-tabs > li.active > a, section#main_pade .ultility-bar ul.filters .nav-tabs > li.active.active-filter > a, .nav-tabs > li.active > a:hover, section#main_pade .ultility-bar ul.filters .nav-tabs > li.active.active-filter > a:hover, .nav-tabs > li.active > a:focus, section#main_pade .ultility-bar ul.filters .nav-tabs > li.active.active-filter > a:focus {
   color: #555555;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -5504,29 +5504,29 @@ tbody.collapse.in {
 }
 
 /* line 118, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-.nav-pills > li {
+.nav-pills > li, section#main_pade .ultility-bar ul.filters .nav-pills > li.active-filter {
   float: left;
 }
 /* line 122, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-.nav-pills > li > a {
+.nav-pills > li > a, section#main_pade .ultility-bar ul.filters .nav-pills > li.active-filter > a {
   border-radius: 4px;
 }
 /* line 125, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-.nav-pills > li + li {
+.nav-pills > li + li, section#main_pade .ultility-bar ul.filters .nav-pills > li.active-filter + li, section#main_pade .ultility-bar ul.filters .nav-pills > li + li.active-filter {
   margin-left: 2px;
 }
 /* line 131, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+.nav-pills > li.active > a, section#main_pade .ultility-bar ul.filters .nav-pills > li.active.active-filter > a, .nav-pills > li.active > a:hover, section#main_pade .ultility-bar ul.filters .nav-pills > li.active.active-filter > a:hover, .nav-pills > li.active > a:focus, section#main_pade .ultility-bar ul.filters .nav-pills > li.active.active-filter > a:focus {
   color: #fff;
   background-color: #337ab7;
 }
 
 /* line 144, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-.nav-stacked > li {
+.nav-stacked > li, section#main_pade .ultility-bar ul.filters .nav-stacked > li.active-filter {
   float: none;
 }
 /* line 146, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-.nav-stacked > li + li {
+.nav-stacked > li + li, section#main_pade .ultility-bar ul.filters .nav-stacked > li.active-filter + li, section#main_pade .ultility-bar ul.filters .nav-stacked > li + li.active-filter {
   margin-top: 2px;
   margin-left: 0;
 }
@@ -5536,11 +5536,11 @@ tbody.collapse.in {
   width: 100%;
 }
 /* line 163, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-.nav-justified > li, .nav-tabs.nav-justified > li {
+.nav-justified > li, .nav-tabs.nav-justified > li, section#main_pade .ultility-bar ul.filters .nav-justified > li.active-filter {
   float: none;
 }
 /* line 165, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-.nav-justified > li > a, .nav-tabs.nav-justified > li > a {
+.nav-justified > li > a, .nav-tabs.nav-justified > li > a, section#main_pade .ultility-bar ul.filters .nav-justified > li.active-filter > a {
   text-align: center;
   margin-bottom: 5px;
 }
@@ -5551,12 +5551,12 @@ tbody.collapse.in {
 }
 @media (min-width: 768px) {
   /* line 177, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-  .nav-justified > li, .nav-tabs.nav-justified > li {
+  .nav-justified > li, .nav-tabs.nav-justified > li, section#main_pade .ultility-bar ul.filters .nav-justified > li.active-filter {
     display: table-cell;
     width: 1%;
   }
   /* line 180, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-  .nav-justified > li > a, .nav-tabs.nav-justified > li > a {
+  .nav-justified > li > a, .nav-tabs.nav-justified > li > a, section#main_pade .ultility-bar ul.filters .nav-justified > li.active-filter > a {
     margin-bottom: 0;
   }
 }
@@ -5566,7 +5566,7 @@ tbody.collapse.in {
   border-bottom: 0;
 }
 /* line 193, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-.nav-tabs-justified > li > a, .nav-tabs.nav-justified > li > a {
+.nav-tabs-justified > li > a, .nav-tabs.nav-justified > li > a, section#main_pade .ultility-bar ul.filters .nav-tabs-justified > li.active-filter > a, section#main_pade .ultility-bar ul.filters .nav-tabs.nav-justified > li.active-filter > a {
   margin-right: 0;
   border-radius: 4px;
 }
@@ -5580,7 +5580,7 @@ tbody.collapse.in {
 }
 @media (min-width: 768px) {
   /* line 206, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss */
-  .nav-tabs-justified > li > a, .nav-tabs.nav-justified > li > a {
+  .nav-tabs-justified > li > a, .nav-tabs.nav-justified > li > a, section#main_pade .ultility-bar ul.filters .nav-tabs-justified > li.active-filter > a, section#main_pade .ultility-bar ul.filters .nav-tabs.nav-justified > li.active-filter > a {
     border-bottom: 1px solid #ddd;
     border-radius: 4px 4px 0 0;
   }
@@ -5832,7 +5832,7 @@ tbody.collapse.in {
   margin: 7.5px -15px;
 }
 /* line 235, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-nav > li > a {
+.navbar-nav > li > a, section#main_pade .ultility-bar ul.filters .navbar-nav > li.active-filter > a {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 20px;
@@ -5849,16 +5849,16 @@ tbody.collapse.in {
     box-shadow: none;
   }
   /* line 251, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-nav .open .dropdown-menu > li > a,
+  .navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open section#main_pade .ultility-bar ul.filters .dropdown-menu > li.active-filter > a, section#main_pade .ultility-bar ul.filters .navbar-nav .open .dropdown-menu > li.active-filter > a,
   .navbar-nav .open .dropdown-menu .dropdown-header {
     padding: 5px 15px 5px 25px;
   }
   /* line 255, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-nav .open .dropdown-menu > li > a {
+  .navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open section#main_pade .ultility-bar ul.filters .dropdown-menu > li.active-filter > a, section#main_pade .ultility-bar ul.filters .navbar-nav .open .dropdown-menu > li.active-filter > a {
     line-height: 20px;
   }
   /* line 257, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus {
+  .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open section#main_pade .ultility-bar ul.filters .dropdown-menu > li.active-filter > a:hover, section#main_pade .ultility-bar ul.filters .navbar-nav .open .dropdown-menu > li.active-filter > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-nav .open section#main_pade .ultility-bar ul.filters .dropdown-menu > li.active-filter > a:focus, section#main_pade .ultility-bar ul.filters .navbar-nav .open .dropdown-menu > li.active-filter > a:focus {
     background-image: none;
   }
 }
@@ -5869,11 +5869,11 @@ tbody.collapse.in {
     margin: 0;
   }
   /* line 270, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-nav > li {
+  .navbar-nav > li, section#main_pade .ultility-bar ul.filters .navbar-nav > li.active-filter {
     float: left;
   }
   /* line 272, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-nav > li > a {
+  .navbar-nav > li > a, section#main_pade .ultility-bar ul.filters .navbar-nav > li.active-filter > a {
     padding-top: 15px;
     padding-bottom: 15px;
   }
@@ -5977,14 +5977,14 @@ tbody.collapse.in {
 }
 
 /* line 327, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-nav > li > .dropdown-menu {
+.navbar-nav > li > .dropdown-menu, section#main_pade .ultility-bar ul.filters .navbar-nav > li.active-filter > .dropdown-menu {
   margin-top: 0;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
 /* line 332, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
+.navbar-fixed-bottom .navbar-nav > li > .dropdown-menu, .navbar-fixed-bottom section#main_pade .ultility-bar ul.filters .navbar-nav > li.active-filter > .dropdown-menu, section#main_pade .ultility-bar ul.filters .navbar-fixed-bottom .navbar-nav > li.active-filter > .dropdown-menu {
   margin-bottom: 0;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
@@ -6057,11 +6057,11 @@ tbody.collapse.in {
   color: #777;
 }
 /* line 415, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav > li > a, .navbar-default section#main_pade .ultility-bar ul.filters .navbar-nav > li.active-filter > a, section#main_pade .ultility-bar ul.filters .navbar-default .navbar-nav > li.active-filter > a {
   color: #777;
 }
 /* line 418, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+.navbar-default .navbar-nav > li > a:hover, .navbar-default section#main_pade .ultility-bar ul.filters .navbar-nav > li.active-filter > a:hover, section#main_pade .ultility-bar ul.filters .navbar-default .navbar-nav > li.active-filter > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default section#main_pade .ultility-bar ul.filters .navbar-nav > li.active-filter > a:focus, section#main_pade .ultility-bar ul.filters .navbar-default .navbar-nav > li.active-filter > a:focus {
   color: #333;
   background-color: transparent;
 }
@@ -6099,11 +6099,11 @@ tbody.collapse.in {
 }
 @media (max-width: 767px) {
   /* line 473, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a, .navbar-default .navbar-nav .open section#main_pade .ultility-bar ul.filters .dropdown-menu > li.active-filter > a, section#main_pade .ultility-bar ul.filters .navbar-default .navbar-nav .open .dropdown-menu > li.active-filter > a {
     color: #777;
   }
   /* line 475, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open section#main_pade .ultility-bar ul.filters .dropdown-menu > li.active-filter > a:hover, section#main_pade .ultility-bar ul.filters .navbar-default .navbar-nav .open .dropdown-menu > li.active-filter > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .open section#main_pade .ultility-bar ul.filters .dropdown-menu > li.active-filter > a:focus, section#main_pade .ultility-bar ul.filters .navbar-default .navbar-nav .open .dropdown-menu > li.active-filter > a:focus {
     color: #333;
     background-color: transparent;
   }
@@ -6158,11 +6158,11 @@ tbody.collapse.in {
   color: #9d9d9d;
 }
 /* line 549, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-inverse .navbar-nav > li > a {
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse section#main_pade .ultility-bar ul.filters .navbar-nav > li.active-filter > a, section#main_pade .ultility-bar ul.filters .navbar-inverse .navbar-nav > li.active-filter > a {
   color: #9d9d9d;
 }
 /* line 552, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse section#main_pade .ultility-bar ul.filters .navbar-nav > li.active-filter > a:hover, section#main_pade .ultility-bar ul.filters .navbar-inverse .navbar-nav > li.active-filter > a:hover, .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse section#main_pade .ultility-bar ul.filters .navbar-nav > li.active-filter > a:focus, section#main_pade .ultility-bar ul.filters .navbar-inverse .navbar-nav > li.active-filter > a:focus {
   color: #fff;
   background-color: transparent;
 }
@@ -6208,11 +6208,11 @@ tbody.collapse.in {
     background-color: #090909;
   }
   /* line 613, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a, .navbar-inverse .navbar-nav .open section#main_pade .ultility-bar ul.filters .dropdown-menu > li.active-filter > a, section#main_pade .ultility-bar ul.filters .navbar-inverse .navbar-nav .open .dropdown-menu > li.active-filter > a {
     color: #9d9d9d;
   }
   /* line 615, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open section#main_pade .ultility-bar ul.filters .dropdown-menu > li.active-filter > a:hover, section#main_pade .ultility-bar ul.filters .navbar-inverse .navbar-nav .open .dropdown-menu > li.active-filter > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-inverse .navbar-nav .open section#main_pade .ultility-bar ul.filters .dropdown-menu > li.active-filter > a:focus, section#main_pade .ultility-bar ul.filters .navbar-inverse .navbar-nav .open .dropdown-menu > li.active-filter > a:focus {
     color: #fff;
     background-color: transparent;
   }
@@ -6257,11 +6257,11 @@ tbody.collapse.in {
   border-radius: 4px;
 }
 /* line 13, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_breadcrumbs.scss */
-.breadcrumb > li {
+.breadcrumb > li, section#main_pade .ultility-bar ul.filters .breadcrumb > li.active-filter {
   display: inline-block;
 }
 /* line 16, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_breadcrumbs.scss */
-.breadcrumb > li + li:before {
+.breadcrumb > li + li:before, section#main_pade .ultility-bar ul.filters .breadcrumb > li.active-filter + li:before, section#main_pade .ultility-bar ul.filters .breadcrumb > li + li.active-filter:before {
   content: "/ ";
   padding: 0 5px;
   color: #ccc;
@@ -6279,12 +6279,13 @@ tbody.collapse.in {
   border-radius: 4px;
 }
 /* line 10, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_pagination.scss */
-.pagination > li {
+.pagination > li, section#main_pade .ultility-bar ul.filters .pagination > li.active-filter {
   display: inline;
 }
 /* line 12, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_pagination.scss */
-.pagination > li > a,
-.pagination > li > span {
+.pagination > li > a, section#main_pade .ultility-bar ul.filters .pagination > li.active-filter > a,
+.pagination > li > span,
+section#main_pade .ultility-bar ul.filters .pagination > li.active-filter > span {
   position: relative;
   float: left;
   padding: 6px 12px;
@@ -6296,22 +6297,26 @@ tbody.collapse.in {
   margin-left: -1px;
 }
 /* line 25, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_pagination.scss */
-.pagination > li:first-child > a,
-.pagination > li:first-child > span {
+.pagination > li:first-child > a, section#main_pade .ultility-bar ul.filters .pagination > li.active-filter:first-child > a,
+.pagination > li:first-child > span,
+section#main_pade .ultility-bar ul.filters .pagination > li.active-filter:first-child > span {
   margin-left: 0;
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
 }
 /* line 32, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_pagination.scss */
-.pagination > li:last-child > a,
-.pagination > li:last-child > span {
+.pagination > li:last-child > a, section#main_pade .ultility-bar ul.filters .pagination > li.active-filter:last-child > a,
+.pagination > li:last-child > span,
+section#main_pade .ultility-bar ul.filters .pagination > li.active-filter:last-child > span {
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
 }
 /* line 41, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_pagination.scss */
-.pagination > li > a:hover, .pagination > li > a:focus,
+.pagination > li > a:hover, section#main_pade .ultility-bar ul.filters .pagination > li.active-filter > a:hover, .pagination > li > a:focus, section#main_pade .ultility-bar ul.filters .pagination > li.active-filter > a:focus,
 .pagination > li > span:hover,
-.pagination > li > span:focus {
+section#main_pade .ultility-bar ul.filters .pagination > li.active-filter > span:hover,
+.pagination > li > span:focus,
+section#main_pade .ultility-bar ul.filters .pagination > li.active-filter > span:focus {
   z-index: 2;
   color: #23527c;
   background-color: #eeeeee;
@@ -6342,41 +6347,47 @@ tbody.collapse.in {
 }
 
 /* line 5, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_pagination.scss */
-.pagination-lg > li > a,
-.pagination-lg > li > span {
+.pagination-lg > li > a, section#main_pade .ultility-bar ul.filters .pagination-lg > li.active-filter > a,
+.pagination-lg > li > span,
+section#main_pade .ultility-bar ul.filters .pagination-lg > li.active-filter > span {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.3333333;
 }
 /* line 12, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_pagination.scss */
-.pagination-lg > li:first-child > a,
-.pagination-lg > li:first-child > span {
+.pagination-lg > li:first-child > a, section#main_pade .ultility-bar ul.filters .pagination-lg > li.active-filter:first-child > a,
+.pagination-lg > li:first-child > span,
+section#main_pade .ultility-bar ul.filters .pagination-lg > li.active-filter:first-child > span {
   border-bottom-left-radius: 6px;
   border-top-left-radius: 6px;
 }
 /* line 18, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_pagination.scss */
-.pagination-lg > li:last-child > a,
-.pagination-lg > li:last-child > span {
+.pagination-lg > li:last-child > a, section#main_pade .ultility-bar ul.filters .pagination-lg > li.active-filter:last-child > a,
+.pagination-lg > li:last-child > span,
+section#main_pade .ultility-bar ul.filters .pagination-lg > li.active-filter:last-child > span {
   border-bottom-right-radius: 6px;
   border-top-right-radius: 6px;
 }
 
 /* line 5, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_pagination.scss */
-.pagination-sm > li > a,
-.pagination-sm > li > span {
+.pagination-sm > li > a, section#main_pade .ultility-bar ul.filters .pagination-sm > li.active-filter > a,
+.pagination-sm > li > span,
+section#main_pade .ultility-bar ul.filters .pagination-sm > li.active-filter > span {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
 }
 /* line 12, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_pagination.scss */
-.pagination-sm > li:first-child > a,
-.pagination-sm > li:first-child > span {
+.pagination-sm > li:first-child > a, section#main_pade .ultility-bar ul.filters .pagination-sm > li.active-filter:first-child > a,
+.pagination-sm > li:first-child > span,
+section#main_pade .ultility-bar ul.filters .pagination-sm > li.active-filter:first-child > span {
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px;
 }
 /* line 18, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_pagination.scss */
-.pagination-sm > li:last-child > a,
-.pagination-sm > li:last-child > span {
+.pagination-sm > li:last-child > a, section#main_pade .ultility-bar ul.filters .pagination-sm > li.active-filter:last-child > a,
+.pagination-sm > li:last-child > span,
+section#main_pade .ultility-bar ul.filters .pagination-sm > li.active-filter:last-child > span {
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px;
 }
@@ -6398,12 +6409,14 @@ tbody.collapse.in {
   clear: both;
 }
 /* line 12, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_pager.scss */
-.pager li {
+.pager li, .pager section#main_pade .ultility-bar ul.filters li.active-filter, section#main_pade .ultility-bar ul.filters .pager li.active-filter {
   display: inline;
 }
 /* line 14, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_pager.scss */
-.pager li > a,
-.pager li > span {
+.pager li > a, .pager section#main_pade .ultility-bar ul.filters li.active-filter > a, section#main_pade .ultility-bar ul.filters .pager li.active-filter > a,
+.pager li > span,
+.pager section#main_pade .ultility-bar ul.filters li.active-filter > span,
+section#main_pade .ultility-bar ul.filters .pager li.active-filter > span {
   display: inline-block;
   padding: 5px 14px;
   background-color: #fff;
@@ -6411,8 +6424,10 @@ tbody.collapse.in {
   border-radius: 15px;
 }
 /* line 23, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_pager.scss */
-.pager li > a:hover,
-.pager li > a:focus {
+.pager li > a:hover, .pager section#main_pade .ultility-bar ul.filters li.active-filter > a:hover, section#main_pade .ultility-bar ul.filters .pager li.active-filter > a:hover,
+.pager li > a:focus,
+.pager section#main_pade .ultility-bar ul.filters li.active-filter > a:focus,
+section#main_pade .ultility-bar ul.filters .pager li.active-filter > a:focus {
   text-decoration: none;
   background-color: #eeeeee;
 }
@@ -6563,7 +6578,7 @@ a.label:hover, a.label:focus {
   margin-right: 5px;
 }
 /* line 55, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_badges.scss */
-.nav-pills > li > a > .badge {
+.nav-pills > li > a > .badge, section#main_pade .ultility-bar ul.filters .nav-pills > li.active-filter > a > .badge {
   margin-left: 3px;
 }
 
@@ -8357,7 +8372,7 @@ button.close {
   text-align: center;
 }
 /* line 185, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_carousel.scss */
-.carousel-indicators li {
+.carousel-indicators li, .carousel-indicators section#main_pade .ultility-bar ul.filters li.active-filter, section#main_pade .ultility-bar ul.filters .carousel-indicators li.active-filter {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -8791,49 +8806,49 @@ button.close {
     display: none !important;
   }
 }
-/* line 13, ../sass/partial/index_showcase.scss */
+/* line 17, ../sass/partial/index_showcase.scss */
 section#main_pade {
   display: flex;
   flex-direction: column;
 }
-/* line 17, ../sass/partial/index_showcase.scss */
+/* line 21, ../sass/partial/index_showcase.scss */
 section#main_pade .container {
   width: 80em;
   align-self: center;
 }
-/* line 21, ../sass/partial/index_showcase.scss */
+/* line 25, ../sass/partial/index_showcase.scss */
 section#main_pade .ultility-bar {
   display: flex;
   justify-content: center;
   height: 3em;
   background: #e0f7fa;
 }
-/* line 26, ../sass/partial/index_showcase.scss */
+/* line 30, ../sass/partial/index_showcase.scss */
 section#main_pade .ultility-bar .container {
   width: 80em;
   display: flex;
   justify-content: space-between;
   height: 100%;
 }
-/* line 32, ../sass/partial/index_showcase.scss */
+/* line 36, ../sass/partial/index_showcase.scss */
 section#main_pade .ultility-bar ul.filters {
   display: flex;
   list-style: none;
   margin: 0;
   height: 100%;
 }
-/* line 37, ../sass/partial/index_showcase.scss */
-section#main_pade .ultility-bar ul.filters li {
+/* line 41, ../sass/partial/index_showcase.scss */
+section#main_pade .ultility-bar ul.filters li, section#main_pade .ultility-bar ul.filters li.active-filter {
   padding-left: 1em;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #f44336;
+  background: #ff9800;
 }
-/* line 45, ../sass/partial/index_showcase.scss */
-section#main_pade .ultility-bar ul.filters li a {
+/* line 49, ../sass/partial/index_showcase.scss */
+section#main_pade .ultility-bar ul.filters li a, section#main_pade .ultility-bar ul.filters li.active-filter a {
   display: flex;
   align-items: center;
   height: 100%;
@@ -8841,15 +8856,24 @@ section#main_pade .ultility-bar ul.filters li a {
   padding-left: 1em;
   padding-right: 1em;
 }
-/* line 52, ../sass/partial/index_showcase.scss */
+/* line 56, ../sass/partial/index_showcase.scss */
 section#main_pade .ultility-bar ul.filters li a:hover {
   background: yellow;
 }
-/* line 56, ../sass/partial/index_showcase.scss */
-section#main_pade .ultility-bar ul.filters li p {
+/* line 60, ../sass/partial/index_showcase.scss */
+section#main_pade .ultility-bar ul.filters li p, section#main_pade .ultility-bar ul.filters li.active-filter p {
   margin: 0;
 }
-/* line 66, ../sass/partial/index_showcase.scss */
+/* line 67, ../sass/partial/index_showcase.scss */
+section#main_pade .ultility-bar ul.filters li.active-filter {
+  transform-origin: center bottom;
+  transform: scaleY(1.2);
+}
+/* line 74, ../sass/partial/index_showcase.scss */
+section#main_pade .ultility-bar .addThead_widget {
+  position: relative;
+}
+/* line 77, ../sass/partial/index_showcase.scss */
 section#main_pade .ultility-bar a.addThread {
   position: relative;
   align-self: center;
@@ -8861,52 +8885,98 @@ section#main_pade .ultility-bar a.addThread {
   justify-content: center;
   align-items: center;
   color: white;
+  z-index: 10;
+  box-shadow: 0px 3px 4px 1px rgba(20, 20, 20, 0.6);
 }
-/* line 77, ../sass/partial/index_showcase.scss */
-section#main_pade .ultility-bar a.addThread .createThread {
+/* line 91, ../sass/partial/index_showcase.scss */
+section#main_pade .ultility-bar .createThread {
   position: absolute;
-  right: 3em;
+  top: 1.2em;
+  right: 1.2em;
   height: 14em;
   width: 16em;
   background: #64b5f6;
   box-sizing: border-box;
   padding: 1em;
+  box-shadow: 0px 3px 16px 1px rgba(20, 20, 20, 0.6);
 }
-/* line 85, ../sass/partial/index_showcase.scss */
-section#main_pade .ultility-bar a.addThread .createThread h3 {
+/* line 101, ../sass/partial/index_showcase.scss */
+section#main_pade .ultility-bar .createThread h3 {
   margin: 0.3em;
 }
 
-/* line 96, ../sass/partial/index_showcase.scss */
+/* line 111, ../sass/partial/index_showcase.scss */
 .showcase {
   display: flex;
+  flex-direction: column;
   width: 80em;
   align-self: center;
   padding-top: 0.4em;
 }
-/* line 101, ../sass/partial/index_showcase.scss */
+/* line 117, ../sass/partial/index_showcase.scss */
 .showcase .showcase-item {
   height: 10em;
   width: 100%;
   background: white;
-  border: 2px solid black;
   box-sizing: border-box;
   padding: 0.7em;
+  box-shadow: 0px 3px 10px 1px rgba(20, 20, 20, 0.6);
+  margin-top: 0.6em;
 }
-/* line 108, ../sass/partial/index_showcase.scss */
+/* line 126, ../sass/partial/index_showcase.scss */
 .showcase .showcase-item h2 {
   margin: 0.2em;
 }
-/* line 111, ../sass/partial/index_showcase.scss */
+/* line 129, ../sass/partial/index_showcase.scss */
 .showcase .showcase-item p {
   margin: 0.1em;
 }
-/* line 114, ../sass/partial/index_showcase.scss */
+/* line 132, ../sass/partial/index_showcase.scss */
 .showcase .showcase-item .thread-info {
   display: flex;
 }
-/* line 116, ../sass/partial/index_showcase.scss */
+/* line 134, ../sass/partial/index_showcase.scss */
 .showcase .showcase-item .thread-info p {
+  margin-right: 1em;
+}
+
+/* line 11, ../sass/partial/user_panel.scss */
+.user-bar {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 2em;
+  padding-right: 2em;
+  box-shadow: 0px 2px 4px 1px rgba(10, 10, 10, 0.5);
+}
+/* line 17, ../sass/partial/user_panel.scss */
+.user-bar * {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+/* line 23, ../sass/partial/user_panel.scss */
+.user-bar button {
+  box-sizing: border-box;
+  height: 2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  background: #5c6bc0;
+  border-radius: 4px;
+  color: white;
+  border: none;
+}
+
+/* line 45, ../sass/partial/user_panel.scss */
+.user .head .avatar {
+  width: 2.4em;
+  height: 2.4em;
+  background: black;
+  margin-right: 1em;
+}
+
+/* line 56, ../sass/partial/user_panel.scss */
+.end .button-set button {
   margin-right: 1em;
 }
 
@@ -8916,7 +8986,7 @@ ul.filter_control {
   list-style-type: none;
 }
 /* line 5, ../sass/module/index-layout.scss */
-ul.filter_control li.filter_button {
+ul.filter_control li.filter_button, ul.filter_control section#main_pade .ultility-bar ul.filters li.filter_button.active-filter, section#main_pade .ultility-bar ul.filters ul.filter_control li.filter_button.active-filter {
   background-color: #e7fff3;
 }
 
@@ -9003,21 +9073,6 @@ body {
   height: 3em;
 }
 
-/* line 3, ../sass/partial/user_panel.scss */
-.user_panel {
-  display: flex;
-  flex-direction: column;
-  min-width: 20em;
-  background-color: white;
-  padding-left: 0.5em;
-}
-/* line 9, ../sass/partial/user_panel.scss */
-.user_panel button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
 /* line 16, ../sass/partial/base.scss */
 .main_chunck {
   display: flex;
@@ -9030,10 +9085,10 @@ ul.filter_control {
   border-top-right-radius: 4px;
 }
 /* line 24, ../sass/partial/base.scss */
-ul.filter_control li.filter_button {
+ul.filter_control li.filter_button, ul.filter_control section#main_pade .ultility-bar ul.filters li.filter_button.active-filter, section#main_pade .ultility-bar ul.filters ul.filter_control li.filter_button.active-filter {
   padding: 0.6em 1.2em;
 }
 /* line 27, ../sass/partial/base.scss */
-ul.filter_control li.filter_button:first-child {
+ul.filter_control li.filter_button:first-child, ul.filter_control section#main_pade .ultility-bar ul.filters li.filter_button.active-filter:first-child, section#main_pade .ultility-bar ul.filters ul.filter_control li.filter_button.active-filter:first-child {
   border-top-left-radius: 4px;
 }

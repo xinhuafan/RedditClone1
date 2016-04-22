@@ -2,13 +2,17 @@ $head-bar-height: 3em;
 $basic-width: 80em;
 $head-bar-color: #e0f7fa;
 
-$filter-color: #f44336;
+$button-box-shadow: 0px 3px 4px 1px rgba(20, 20, 20, 0.6);
+
+$filter-color: #ff9800;
 $add-button-size: 2.4em;
 
 $thread-creation-height: 14em;
 $thread-creation-width: 16em;
+$thread-creation-box-shadow: 0px 3px 16px 1px rgba(20, 20, 20, 0.6);
 
 $thread-height: 10em;
+$thread-box-shadow: 0px 3px 10px 1px rgba(20, 20, 20, 0.6);
 
 section#main_pade {
   display: flex;
@@ -60,9 +64,16 @@ section#main_pade {
 
       }
       //li
-
+      li.active-filter {
+        @extend li;
+        transform-origin: center bottom;
+        transform: scaleY(1.2);
+      }
     }
     //ul
+    .addThead_widget {
+      position: relative;
+    }
     a.addThread {
       position: relative;
       align-self: center;
@@ -74,17 +85,21 @@ section#main_pade {
       justify-content: center;
       align-items: center;
       color: white;
-      .createThread {
-        position: absolute;
-        right: 3em;
-        height: $thread-creation-height;
-        width: $thread-creation-width;
-        background: #64b5f6;
-        box-sizing: border-box;
-        padding: 1em;
-        h3 {
-          margin: 0.3em;
-        }
+      z-index: 10;
+      box-shadow: $button-box-shadow;
+    }
+    .createThread {
+      position: absolute;
+      top: $add-button-size / 2;
+      right: $add-button-size / 2;
+      height: $thread-creation-height;
+      width: $thread-creation-width;
+      background: #64b5f6;
+      box-sizing: border-box;
+      padding: 1em;
+      box-shadow: $thread-creation-box-shadow;
+      h3 {
+        margin: 0.3em;
       }
     }
   }
@@ -95,6 +110,7 @@ section#main_pade {
 
 .showcase {
   display: flex;
+  flex-direction: column;
   width: $basic-width;
   align-self: center;
   padding-top: 0.4em;
@@ -102,9 +118,11 @@ section#main_pade {
     height: $thread-height;
     width: 100%;
     background: white;
-    border: 2px solid black;
+    //border: 2px solid black
     box-sizing: border-box;
     padding: 0.7em;
+    box-shadow: $thread-box-shadow;
+    margin-top: 0.6em;
     h2 {
       margin: 0.2em;
     }
