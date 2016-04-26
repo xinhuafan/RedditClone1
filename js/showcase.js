@@ -63,13 +63,23 @@
 
         self.getHottest = function(){
             //get hottest
+            $("ul.filters > li").removeClass("active-filter");
+            $("li#Hottest").addClass("active-filter");
         }
 
         self.getLatest = function(){
             //get lastest
+            $("ul.filters > li").removeClass("active-filter");
+            $("li#Lastest").addClass("active-filter");
         }
         self.getUser_replied = function(){
+            $("ul.filters > li").removeClass("active-filter");
+            $("li#Replied").addClass("active-filter");
+        }
 
+        self.getRecommended = function(){
+            $("ul.filters > li").removeClass("active-filter");
+            $("li#Recommended").addClass("active-filter");
         }
     }
 
@@ -86,6 +96,9 @@
         self._submitter = ko.observable(user);
         self._replies = ko.observable(reply_num);
         self._comments = ko.observable(comments_num);
+        self._link_address = ko.computed(function(){
+            return "/comments?id="+self._thread_id;
+        },self)
     }
 
     function AnimateRotate(angle) {

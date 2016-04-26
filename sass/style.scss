@@ -1,7 +1,10 @@
 @import "compass";
-@import "bootstrap";
+//@import "bootstrap";
+//@import "normalize";
+
 @import "partial/index_showcase";
 @import "partial/user_panel";
+@import "partial/login_panel";
 
 @import "module/index-layout";
 @import "partial/base";

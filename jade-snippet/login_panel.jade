@@ -1,54 +1,56 @@
 //
    Created by Qiushuo on 4/20/2016.
 
-.dialog
-    .head
-        .fa.fa-times
-    //.head
-    .dialog-body
-        input(type = "checkbox")#widget_type
-        label(for="widget_type")#type_label
-            #label-back(data-checked="Sign in" data-unchecked = "Login")
-        //a.widget-select.current Sign up
-        //a.widget-select Sign in
-        .input-widget
-            #signin-widget
-                p username/email
-                .input_back
-                    .input_head
-                        i.fa.fa-user
-                        p /
-                        i.fa.fa-envelope
-                    input(type="text")#login
-                p password
-                .input_back
-                    .input_head
-                        i.fa.fa-key
-                    input(type="password")#loginpassword
-                .remember
-                    input(type="checkbox")#remember
-                    p remember me
-                .buttons
-                    button#commit Login
-            //login widge
-            #signup-widget
-                p email
-                .input_back
-                    .input_head
-                        i.fa.fa-envelope
-                    input(type="text")
-                p user name
-                .input_back
-                    .input_head
-                        i.fa.fa-user
-                    input(type="text")
-                p password
-                .input_back
-                    .input_head
-                        i.fa.fa-key
-                    input(type="text")
-                button.next next >
-        //input widget
+section.fullpage_cover
+    .dialog
+        .head
+            a.close_dialog
+                .fa.fa-times
+        //.head
+        .dialog-body
+            input(type = "checkbox")#widget_type
+            label(for="widget_type")#type_label
+                #label-back(data-checked="Sign up" data-unchecked = "Sign in")
+            //a.widget-select.current Sign up
+            //a.widget-select Sign in
+            .input-widget
+                #signin-widget
+                    p username/email
+                    .input_back
+                        .input_head
+                            i.fa.fa-user
+                            p /
+                            i.fa.fa-envelope
+                        input(type="text" data-bind = "value: _identity_info")#login
+                    p password
+                    .input_back
+                        .input_head
+                            i.fa.fa-key
+                        input(type="password", data-bind = "value: _password")#loginpassword
+                    .remember
+                        input(type="checkbox")#remember
+                        p remember me
+                    .buttons
+                        button#commit(data-bind = "click: SignIn") Signin
+                //login widge
+                #signup-widget
+                    p email
+                    .input_back
+                        .input_head
+                            i.fa.fa-envelope
+                        input(type="text" data-bind = "value: _email")
+                    p user name
+                    .input_back
+                        .input_head
+                            i.fa.fa-user
+                        input(type="text" data-bind = "value: _user_name")
+                    p password
+                    .input_back
+                        .input_head
+                            i.fa.fa-key
+                        input(type="passwword" data-bind = "value: _password")
+                    button.next(data-bind = "click: Signup") next >
+            //input widget
 
-    //dialog body
-//dialog
+        //dialog body
+    //dialog

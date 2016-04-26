@@ -1,0 +1,222 @@
+@import "compass";
+
+@import url(https://fonts.googleapis.com/css?family=Arimo);
+
+$dialog-backgourd: #eeeeee;
+$dialog-head-color: #aaaaff;
+
+$dialog-width: 30em;
+$dialog-heihgt: 28em;
+$dialog-border-radius: 0.4em;
+$dialog-head-height: 2.7em;
+
+$text-input-height: 1.3em;
+$text-input-padding: 0.2em;
+$text-input-width: 12em;
+$text-input-head-color: #64b5f6;
+$text-input-radius: 4px;
+
+//check
+$check-width: 8em;
+$check-height: 1.8em;
+$check-color: #26c6da;
+$check-checked-color: #fefefe;
+$check-radius: 7px;
+
+p, h1, h2, a {
+  font-family: "Lato", sans-serif;
+}
+
+input[type = "text"], input[type = "password"] {
+  border-radius: 0.3em;
+  border: none;
+  padding: 0.3em;
+  background: transparent;
+  width: $text-input-width;
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  background-color: #7777ff;
+  border: none;
+  padding: 0.8em;
+  font-size: 1.2em;
+  width: 100%;
+}
+
+section.fullpage_cover {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 40;
+  background: rgba(100, 100, 100, 0.4);
+}
+
+.dialog {
+  //margin: auto auto
+  background-color: $dialog-backgourd;
+  width: $dialog-width;
+  height: $dialog-heihgt;
+  border-radius: $dialog-border-radius;
+  box-shadow: 0px 20px 80px 5px rgba(100, 100, 100, 0.7);
+  .head {
+    font-weight: bolder;
+    box-sizing: content-box;
+    //padding-top: $dialog-head-height - 1 em
+    //padding: 0 0.5em
+    height: $dialog-head-height;
+    background-color: $dialog-backgourd;
+    @include border-top-radius($dialog-border-radius);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    * {
+      //margin: 0.2 2em;
+    }
+  }
+  //.head
+  .dialog-body {
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-top: 1em;
+    a.widget-select {
+      padding: 0.3em;
+      background-color: white;
+      border: 2px solid blue;
+      &:first-child {
+        @include border-left-radius(0.4em);
+        border-right: none;
+      }
+      &:last-child {
+        @include border-right-radius(0.4em);
+      }
+    }
+    .input-widget {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      #signup-widget {
+        display: none;
+        flex-direction: column;
+      }
+    }
+    //input widget
+
+  }
+  //dialog body
+}
+
+//dialog
+
+#signin-widget {
+  display: flex;
+  flex-direction: column;
+  .remember {
+    display: flex;
+    align-items: center;
+  }
+}
+
+//signin widget
+
+.input_back {
+  //padding: $text-input-padding
+  background-color: white;
+  width: $text-input-width;
+  border-radius: $text-input-radius;
+  //box-shadow: inset 2px 2px 5px 2px rgba(20,20,20,0.3)
+  display: flex;
+  &:focus {
+    outline: blue;
+  }
+  .input_head {
+    min-width: 3em;
+    height: 1.4em;
+    background: $text-input-head-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: $text-input-radius;
+    border-bottom-left-radius: $text-input-radius;
+  }
+}
+
+//input back
+
+//input checked
+$check-offset: $check-width / 2;
+
+input#widget_type {
+  opacity: 0;
+  &[disabled] ~ label {
+    background: #aaaaaa;
+  }
+  &:checked {
+    ~ label {
+      #label-back {
+        &:before {
+          background: $check-checked-color;
+          color: black;
+        }
+        &:after {
+          //transform: translateX(-$check-offset)
+          background: transparent;
+          color: #cccccc;
+        }
+      }
+    }
+  }
+}
+
+label#type_label {
+  font-family: "Arimo", sans-serif;
+  #label-back {
+    box-sizing: border-box;
+    background: $check-color;
+    width: $check-width;
+    height: $check-height;
+    border-radius: $check-radius;
+    display: flex;
+    align-items: center;
+    transition: background 0.8s;
+    &:before {
+      box-sizing: border-box;
+      content: attr(data-checked);
+      width: 50%;
+      height: 100%;
+      text-align: center;
+      padding-top: ($check-height - 1em) / 2;
+      transition: all 0.8s;
+      border-top-left-radius: $check-radius;
+      border-bottom-left-radius: $check-radius;
+      color: #cccccc;
+    }
+    &:after {
+      box-sizing: border-box;
+      content: attr(data-unchecked);
+      width: 50%;
+      height: 100%;
+      text-align: center;
+      padding-top: ($check-height - 1em) / 2;
+      background: $check-checked-color;
+      transition: background-color 0.8s;
+      border-top-right-radius: $check-radius;
+      border-bottom-right-radius: $check-radius;
+    }
+  }
+}
+
+//
+button.next {
+  margin-top: 0.8em;
+}
+
+.dialog {}

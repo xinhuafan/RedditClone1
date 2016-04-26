@@ -1,6 +1,3 @@
-/**
- * Created by Qiushuo on 4/22/2016.
- */
 var Login_success = {
     request: "user_login",
     state: "success",
@@ -34,8 +31,29 @@ function SigninInfo(identity_info, password){
         //console.log("sign in");
         var cur_date = new Date();
         self._signin_date = cur_date;
-        var json = ko.toJSON(self);
-        console.log(json);
+        var json_1 = ko.toJSON(self);
+        console.log(json_1);
+        $.ajax({
+            url: parameters.url,
+            type: "POST",
+            data: json_1,
+            contentType: "application/json",
+            success: function (res) {
+                if ($.isFunction(parameters.onSuccess)) {
+                    //parameters.onSuccess(res);
+                    console.log(res);
+                    var user_name;
+                    if(res.user_name!=null){
+                        user_name = res.user_name;
+                    }
+                }
+            },
+            error: function (xhr, status, error) {
+                if ($.isFunction(parameters.onError)) {
+                    //parameters.onError(xhr, status, error);
+                }
+            }
+        });
     }
 }
 
@@ -48,6 +66,27 @@ function SignupInfo(email, user_name, password){
         console.log("signup");
         var json = ko.toJSON(self);
         console.log(json);
+        $.ajax({
+            url: parameters.url,
+            type: "POST",
+            data: json_2,
+            contentType: "application/json",
+            success: function (res) {
+                if ($.isFunction(parameters.onSuccess)) {
+                    //parameters.onSuccess(res);
+                    console.log(res);
+                    var user_name;
+                    if(res.user_name!=null){
+                        user_name = res.user_name;
+                    }
+                }
+            },
+            error: function (xhr, status, error) {
+                if ($.isFunction(parameters.onError)) {
+                    //parameters.onError(xhr, status, error);
+                }
+            }
+        });
     }
 }
 
@@ -66,14 +105,20 @@ $(document).ready(function(){
             $("#signup-widget").css("display", "none");
         }
 
-        var signin_form = new SigninInfo("","","");
-        var signup_form = new SignupInfo("","");
 
-        ko.applyBindings(signin_form, $("#signin-widget")[0]);
-        ko.applyBindings(signup_form, $("#signup-widget")[0]);
+
 
     });
 
     //
+    var signin_form = new SigninInfo("","","");
+    var signup_form = new SignupInfo("","");
 
+
+    ko.applyBindings(signin_form, $("#signin-widget")[0]);
+    ko.applyBindings(signup_form, $("#signup-widget")[0]);
+
+    $(".close_dialog").click(function(){
+        $("section.fullpage_cover").hide();
+    })
 })

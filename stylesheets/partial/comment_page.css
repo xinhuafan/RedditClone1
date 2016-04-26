@@ -3,7 +3,7 @@ textarea {
   resize: none;
 }
 
-/* line 47, ../../sass/partial/comment_page.sass */
+/* line 47, ../../sass/partial/comment_page.scss */
 .thread {
   box-sizing: border-box;
   position: relative;
@@ -12,7 +12,7 @@ textarea {
   align-items: flex-start;
   padding-bottom: 4em;
 }
-/* line 56, ../../sass/partial/comment_page.sass */
+/* line 56, ../../sass/partial/comment_page.scss */
 .thread .avatar-back {
   height: 7em;
   width: 8em;
@@ -22,7 +22,7 @@ textarea {
   border: 2px solid #aaa;
   border-right: none;
 }
-/* line 64, ../../sass/partial/comment_page.sass */
+/* line 64, ../../sass/partial/comment_page.scss */
 .thread .avatar {
   margin-left: 0.5em;
   margin-top: 0.5em;
@@ -31,7 +31,7 @@ textarea {
   background-color: black;
   border-radius: 50%;
 }
-/* line 70, ../../sass/partial/comment_page.sass */
+/* line 70, ../../sass/partial/comment_page.scss */
 .thread .thread-entry {
   box-sizing: border-box;
   align-self: flex-start;
@@ -42,7 +42,7 @@ textarea {
   flex-direction: column;
   border-top-right-radius: 0.5em;
 }
-/* line 81, ../../sass/partial/comment_page.sass */
+/* line 81, ../../sass/partial/comment_page.scss */
 .thread::before {
   position: absolute;
   left: 3em;
@@ -52,7 +52,7 @@ textarea {
   z-index: -2;
 }
 
-/* line 92, ../../sass/partial/comment_page.sass */
+/* line 92, ../../sass/partial/comment_page.scss */
 .thread-entry .thread-head {
   position: relative;
   box-sizing: border-box;
@@ -64,52 +64,52 @@ textarea {
   padding-left: 1em;
   background-color: #18FFFF;
 }
-/* line 102, ../../sass/partial/comment_page.sass */
+/* line 102, ../../sass/partial/comment_page.scss */
 .thread-entry .thread-head * {
   padding-right: 1em;
 }
-/* line 105, ../../sass/partial/comment_page.sass */
+/* line 105, ../../sass/partial/comment_page.scss */
 .thread-entry .thread-head .thread_options {
   padding: 0px;
   padding-right: 0.4em;
 }
-/* line 108, ../../sass/partial/comment_page.sass */
+/* line 108, ../../sass/partial/comment_page.scss */
 .thread-entry .thread-head .thread_options a {
   padding-left: 0.1em;
   padding-right: 0.2em;
 }
-/* line 113, ../../sass/partial/comment_page.sass */
+/* line 113, ../../sass/partial/comment_page.scss */
 .thread-entry .thread_items {
   display: flex;
 }
-/* line 115, ../../sass/partial/comment_page.sass */
+/* line 115, ../../sass/partial/comment_page.scss */
 .thread-entry .thread-footer {
   display: flex;
   justify-content: space-between;
   height: 2em;
   align-items: center;
 }
-/* line 120, ../../sass/partial/comment_page.sass */
+/* line 120, ../../sass/partial/comment_page.scss */
 .thread-entry .thread-footer .score_buttons {
   display: flex;
   align-items: center;
   padding-left: 1em;
 }
-/* line 124, ../../sass/partial/comment_page.sass */
+/* line 124, ../../sass/partial/comment_page.scss */
 .thread-entry .thread-footer .score_buttons p {
   margin-right: 1em;
 }
-/* line 126, ../../sass/partial/comment_page.sass */
+/* line 126, ../../sass/partial/comment_page.scss */
 .thread-entry .thread-footer .thread-ultility {
   padding-right: 1em;
 }
 
-/* line 129, ../../sass/partial/comment_page.sass */
+/* line 129, ../../sass/partial/comment_page.scss */
 a#filter, a#sort, a#sort-order {
   position: relative;
   padding-left: 1em;
 }
-/* line 132, ../../sass/partial/comment_page.sass */
+/* line 132, ../../sass/partial/comment_page.scss */
 a#filter ul, a#sort ul, a#sort-order ul {
   list-style: none;
   position: absolute;
@@ -117,7 +117,7 @@ a#filter ul, a#sort ul, a#sort-order ul {
   top: 0.4em;
   padding-left: 1em;
 }
-/* line 139, ../../sass/partial/comment_page.sass */
+/* line 139, ../../sass/partial/comment_page.scss */
 a#filter ul li, a#sort ul li, a#sort-order ul li {
   width: 8em;
   padding-left: 0.3em;
@@ -127,30 +127,30 @@ a#filter ul li, a#sort ul li, a#sort-order ul li {
   align-items: center;
   z-index: 100;
 }
-/* line 147, ../../sass/partial/comment_page.sass */
+/* line 147, ../../sass/partial/comment_page.scss */
 a#filter ul li:hover, a#sort ul li:hover, a#sort-order ul li:hover {
   color: #aaa;
 }
-/* line 149, ../../sass/partial/comment_page.sass */
+/* line 149, ../../sass/partial/comment_page.scss */
 a#filter ul li:first-child, a#sort ul li:first-child, a#sort-order ul li:first-child {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 152, ../../sass/partial/comment_page.sass */
+/* line 152, ../../sass/partial/comment_page.scss */
 a#filter ul li:last-child, a#sort ul li:last-child, a#sort-order ul li:last-child {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-/* line 155, ../../sass/partial/comment_page.sass */
+/* line 155, ../../sass/partial/comment_page.scss */
 a#filter ul li p, a#sort ul li p, a#sort-order ul li p {
   margin: 0;
 }
-/* line 157, ../../sass/partial/comment_page.sass */
+/* line 157, ../../sass/partial/comment_page.scss */
 a#filter ul li i, a#sort ul li i, a#sort-order ul li i {
   margin-right: 0.4em;
 }
 
-/* line 160, ../../sass/partial/comment_page.sass */
+/* line 160, ../../sass/partial/comment_page.scss */
 .comment-block {
   position: relative;
   box-sizing: border-box;
@@ -158,7 +158,7 @@ a#filter ul li i, a#sort ul li i, a#sort-order ul li i {
   display: flex;
   flex-direction: column;
 }
-/* line 166, ../../sass/partial/comment_page.sass */
+/* line 166, ../../sass/partial/comment_page.scss */
 .comment-block::before {
   position: absolute;
   content: "";
@@ -166,14 +166,14 @@ a#filter ul li i, a#sort ul li i, a#sort-order ul li i {
   height: 100%;
 }
 
-/* line 173, ../../sass/partial/comment_page.sass */
+/* line 173, ../../sass/partial/comment_page.scss */
 .comment {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 1em;
 }
-/* line 178, ../../sass/partial/comment_page.sass */
+/* line 178, ../../sass/partial/comment_page.scss */
 .comment .avatar {
   position: relative;
   height: 5em;
@@ -182,7 +182,7 @@ a#filter ul li i, a#sort ul li i, a#sort-order ul li i {
   border: 1px solid black;
   border-radius: 50%;
 }
-/* line 186, ../../sass/partial/comment_page.sass */
+/* line 186, ../../sass/partial/comment_page.scss */
 .comment .avatar .pos {
   position: absolute;
   top: 0.3em;
@@ -192,7 +192,7 @@ a#filter ul li i, a#sort ul li i, a#sort-order ul li i {
   background-color: black;
   border-radius: 50%;
 }
-/* line 195, ../../sass/partial/comment_page.sass */
+/* line 195, ../../sass/partial/comment_page.scss */
 .comment .comment-entry {
   display: flex;
   flex-direction: column;
@@ -205,7 +205,7 @@ a#filter ul li i, a#sort ul li i, a#sort-order ul li i {
   border: 1px solid #aaa;
   z-index: 10;
 }
-/* line 207, ../../sass/partial/comment_page.sass */
+/* line 207, ../../sass/partial/comment_page.scss */
 .comment .comment-entry::before {
   position: absolute;
   top: 50%;
@@ -221,7 +221,7 @@ a#filter ul li i, a#sort ul li i, a#sort-order ul li i {
   z-index: 1;
 }
 
-/* line 225, ../../sass/partial/comment_page.sass */
+/* line 225, ../../sass/partial/comment_page.scss */
 .joint {
   height: 2.4em;
   width: 2.4em;
@@ -232,7 +232,7 @@ a#filter ul li i, a#sort ul li i, a#sort-order ul li i {
   justify-content: center;
   box-shadow: inset -1px -1px 5px 2px rgba(10, 10, 10, 0.4), inset 1px 1px 5px 2px rgba(220, 220, 220, 0.9);
 }
-/* line 234, ../../sass/partial/comment_page.sass */
+/* line 234, ../../sass/partial/comment_page.scss */
 .joint .joint-inner {
   height: 1.5em;
   width: 1.5em;
@@ -242,16 +242,16 @@ a#filter ul li i, a#sort ul li i, a#sort-order ul li i {
   align-items: center;
   justify-content: center;
 }
-/* line 244, ../../sass/partial/comment_page.sass */
+/* line 244, ../../sass/partial/comment_page.scss */
 .joint .fold {
   background-color: green;
 }
-/* line 247, ../../sass/partial/comment_page.sass */
+/* line 247, ../../sass/partial/comment_page.scss */
 .joint .unfold {
   background-color: red;
 }
 
-/* line 255, ../../sass/partial/comment_page.sass */
+/* line 255, ../../sass/partial/comment_page.scss */
 .comment-entry .head-bar {
   position: relative;
   border-top-left-radius: 0.2em;
@@ -262,59 +262,59 @@ a#filter ul li i, a#sort ul li i, a#sort-order ul li i {
   display: flex;
   align-items: center;
 }
-/* line 264, ../../sass/partial/comment_page.sass */
+/* line 264, ../../sass/partial/comment_page.scss */
 .comment-entry .head-bar p {
   margin: 0px;
   margin-left: 1em;
 }
-/* line 267, ../../sass/partial/comment_page.sass */
+/* line 267, ../../sass/partial/comment_page.scss */
 .comment-entry .head-bar p.last_edit {
   color: #eee;
 }
-/* line 269, ../../sass/partial/comment_page.sass */
+/* line 269, ../../sass/partial/comment_page.scss */
 .comment-entry .head-bar i {
   color: black;
 }
-/* line 271, ../../sass/partial/comment_page.sass */
+/* line 271, ../../sass/partial/comment_page.scss */
 .comment-entry .head-bar .button_collection {
   position: absolute;
   right: 60px;
   width: 10%;
   display: flex;
 }
-/* line 276, ../../sass/partial/comment_page.sass */
+/* line 276, ../../sass/partial/comment_page.scss */
 .comment-entry .head-bar ul.comment-menu {
   position: absolute;
   list-style: none;
 }
-/* line 279, ../../sass/partial/comment_page.sass */
+/* line 279, ../../sass/partial/comment_page.scss */
 .comment-entry .content {
   min-height: 5.5em;
   width: 100%;
 }
-/* line 282, ../../sass/partial/comment_page.sass */
+/* line 282, ../../sass/partial/comment_page.scss */
 .comment-entry .comment_footer {
   display: flex;
   align-items: center;
   box-sizing: border-box;
   padding-left: 1em;
 }
-/* line 287, ../../sass/partial/comment_page.sass */
+/* line 287, ../../sass/partial/comment_page.scss */
 .comment-entry .comment_footer .status {
   margin-left: 0.5em;
   display: flex;
 }
-/* line 290, ../../sass/partial/comment_page.sass */
+/* line 290, ../../sass/partial/comment_page.scss */
 .comment-entry .comment_footer .status p {
   margin-right: 1em;
 }
 
-/* line 293, ../../sass/partial/comment_page.sass */
+/* line 293, ../../sass/partial/comment_page.scss */
 .button_collection {
   position: relative;
   align-items: center;
 }
-/* line 295, ../../sass/partial/comment_page.sass */
+/* line 295, ../../sass/partial/comment_page.scss */
 .button_collection .button_name_preview {
   position: absolute;
   top: 0em;
@@ -323,53 +323,53 @@ a#filter ul li i, a#sort ul li i, a#sort-order ul li i {
   height: 1.2em;
   background-color: white;
 }
-/* line 303, ../../sass/partial/comment_page.sass */
+/* line 303, ../../sass/partial/comment_page.scss */
 .button_collection * {
   width: 1.5em;
 }
 
-/* line 307, ../../sass/partial/comment_page.sass */
+/* line 307, ../../sass/partial/comment_page.scss */
 .content * {
   margin-left: 1em;
 }
-/* line 310, ../../sass/partial/comment_page.sass */
+/* line 310, ../../sass/partial/comment_page.scss */
 .content .comment-view button.edit_button {
   border: 1px solid #555;
   font-size: 1em;
   width: 2em;
 }
-/* line 315, ../../sass/partial/comment_page.sass */
+/* line 315, ../../sass/partial/comment_page.scss */
 .content .comment-view button.edit_button i {
   margin: 0.2em;
 }
-/* line 318, ../../sass/partial/comment_page.sass */
+/* line 318, ../../sass/partial/comment_page.scss */
 .content .comment-view:hover {
   background-color: #aaa;
   border: 1px solid #ddf;
 }
-/* line 321, ../../sass/partial/comment_page.sass */
+/* line 321, ../../sass/partial/comment_page.scss */
 .content .comment-view:hover button.edit_button {
   display: block;
 }
-/* line 324, ../../sass/partial/comment_page.sass */
+/* line 324, ../../sass/partial/comment_page.scss */
 .content .edit-view {
   display: none;
   box-sizing: border-box;
   flex-direction: column;
 }
-/* line 328, ../../sass/partial/comment_page.sass */
+/* line 328, ../../sass/partial/comment_page.scss */
 .content .edit-view textarea.text-edit {
   box-sizing: border-box;
   margin-top: 0.5em;
   height: 3em;
   width: 100%;
 }
-/* line 333, ../../sass/partial/comment_page.sass */
+/* line 333, ../../sass/partial/comment_page.scss */
 .content .edit-view .submit_buttons {
   align-self: flex-end;
 }
 
-/* line 337, ../../sass/partial/comment_page.sass */
+/* line 337, ../../sass/partial/comment_page.scss */
 .thread_reply {
   postion: fixed;
   bottom: 0;
@@ -381,16 +381,16 @@ a#filter ul li i, a#sort ul li i, a#sort-order ul li i {
   box-sizing: border-box;
   padding: 1em;
 }
-/* line 347, ../../sass/partial/comment_page.sass */
+/* line 347, ../../sass/partial/comment_page.scss */
 .thread_reply textarea#reply {
   height: 2em;
 }
-/* line 349, ../../sass/partial/comment_page.sass */
+/* line 349, ../../sass/partial/comment_page.scss */
 .thread_reply textarea#reply:focus {
   height: 4em;
 }
 
-/* line 353, ../../sass/partial/comment_page.sass */
+/* line 353, ../../sass/partial/comment_page.scss */
 i.fa-trash:hover, i.f-heart:hover {
   color: red;
 }

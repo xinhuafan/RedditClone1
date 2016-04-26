@@ -14,6 +14,10 @@ $thread-creation-box-shadow: 0px 3px 16px 1px rgba(20, 20, 20, 0.6);
 $thread-height: 10em;
 $thread-box-shadow: 0px 3px 10px 1px rgba(20, 20, 20, 0.6);
 
+a, a:hover{
+  text-decoration: none;
+}
+
 section#main_pade {
   display: flex;
   flex-direction: column;
