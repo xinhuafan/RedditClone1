@@ -1,0 +1,58 @@
+{
+  // login requests
+  "Login_success": {
+    "request": "user_login",
+    "state": "success",
+    "user_name": "John"
+  },
+  "Login_fail": {
+  "request": "user_login",
+  "state": "failed",
+  "user_name": null
+  },
+  "Signin_success":{
+    "request": "user_signin",
+    "state": "success",
+    "user_name": "John"
+  },
+  "Signin_failed": {
+    "request": "user_signin",
+    "state": "success",
+    "user_name": null
+  },
+
+
+  //index page request
+  "getHottest": {
+    "request": "get_Hottest_threads",
+    "num": 17
+  },
+
+  "getHottest": {
+    "request": "get_Lattest_threads",
+    "num": 17
+  },
+
+  "getUserReplied": {
+  "request": "get_User_replied",
+  "num": 17
+  },
+
+  "getUserCommended": {
+  "request": "get_Recommanded",
+  "num": 17
+  },
+
+  //comment
+  "request_Thread_JSON":{
+    "request" : "get_Thread_by_id",
+    "Thread_id" : 10
+  }
+}
+
+
+
+
+
+
+
