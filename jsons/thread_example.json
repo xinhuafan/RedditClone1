@@ -1,0 +1,49 @@
+{
+  "Thread": {
+    "_id": 10,
+    "_user_name": "Sarah jane",
+    "_user_image_url": null,
+    "_current_user": null,
+    "_likes": 1,
+    "posted_time": "6:44 PM Thursday, April 14, 2016",
+    "entry": "something",
+    "voted_user": [
+      0,
+      1
+    ],
+    "comments": [
+      {
+        "comment": {
+          "_id": 100,
+          "_user_name": "Matt MacDough",
+          "_user_image_url": null,
+          "_posted_time": "6:44 PM Thursday, April 14, 2016",
+          "_entry": "I like",
+          "_thread": 10,
+          "_isedited": false,
+          "likes": 1,
+          "voted_user": [
+            3,
+            4
+          ]
+        }
+      },
+      {
+        "comment": {
+          "_id": 101,
+          "_user_name": "Mark Grey",
+          "_user_image_url": null,
+          "_posted_time": "6:44 PM Thursday, April 14, 2016",
+          "_entry": "I like",
+          "_thread": 10,
+          "_isedited": false,
+          "likes": 2,
+          "voted_user": [
+            3,
+            4
+          ]
+        }
+      }
+    ]
+  }
+}
