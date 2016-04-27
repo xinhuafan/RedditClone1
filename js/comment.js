@@ -239,13 +239,7 @@ var Thread = function(){
 
 //ko.applyBindings(new comment_model("john smith", "none", 2, false, false, "something you know"));
 
-    $("a#filter").click(function(){
-        $(".filter-types").toggle();
-    })
 
-    $("a#sort").click(function(){
-        $(".sort-types").toggle();
-    })
 
     function toggleSortingOrder(icon){
         if(icon.hasClass("fa-sort-amount-desc")){
@@ -276,6 +270,14 @@ var Thread = function(){
 
     $(document).ready(function(){
 
+        $("a#filter").click(function(){
+            $(".filter-types").toggle();
+        })
+
+        $("a#sort").click(function(){
+            $(".sort-types").toggle();
+        })
+
         $("a#sort-order").click(function(){
             toggleSortingOrder($("a#sort-order > i"));
         })
@@ -299,7 +301,7 @@ var Thread = function(){
 
         var cur_thread = new thread_viewmodel("Joe_Doe",undefined, 0, "anything\n to now",comment_list, false, false, undefined);
 
-        ko.applyBindings(cur_thread, $(".thread")[0]);
+        ko.applyBindings(cur_thread, $(".Thread_View")[0]);
 
         var testJSON = ko.toJSON(cur_thread);
         console.log(testJSON);
@@ -308,12 +310,4 @@ var Thread = function(){
 }
 
 Thread();
-console.log("Thread JS loaded!");
-
-$(document).ready(function(){
-    Thread();
-});
-
-
-
 console.log("Thread JS loaded!");

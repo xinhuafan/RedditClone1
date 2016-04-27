@@ -32,5 +32,9 @@ var User_Bar = function(){
 
         ko.applyBindings(user_bar, $(".user_bar")[0]);
     })
+
+    $("#login").click(function(){
+        $("section.fullpage_cover").toggle();
+    });
 }
 User_Bar();

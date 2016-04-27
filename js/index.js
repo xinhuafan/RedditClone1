@@ -1,22 +1,22 @@
 (function(){
 
-    $.getScript("user_panel.js", function(){
+    //$.getScript("user_panel.js", function(){
 
-        alert("Script loaded but not necessarily executed.");
+        //alert("Script loaded but not necessarily executed.");
 
-    });
+    //});
 
-    $.getScript("login_panel.js", function(){
+    //$.getScript("login_panel.js", function(){
 
-        alert("Script loaded but not necessarily executed.");
+        //alert("Script loaded but not necessarily executed.");
 
-    });
+    //});
 
-    $.getScript("showcase.js", function(){
+    //$.getScript("showcase.js", function(){
 
-        alert("Script loaded but not necessarily executed.");
+        //alert("Script loaded but not necessarily executed.");
 
-    });
+    //});
 
 
 
