@@ -9,8 +9,8 @@ var index_showcase = function(){
         num: thread_load_num
     }
 
-    var getHottest = {
-        request: "get_Lattest_threads",
+    var getLatest = {
+        request: "get_Latest_threads",
         num: thread_load_num
     }
 
@@ -61,16 +61,44 @@ var index_showcase = function(){
             //get hottest
             $("ul.filters > li").removeClass("active-filter");
             $("li#Hottest").addClass("active-filter");
+
+            $.ajax({
+                url: url,
+                method: "POST",
+                data: ko.toJSON(getHottest),
+                dataType: 'jason',
+                success: function(data){
+                    self = ko.fromJSON(data);
+                }
+            })
         }
 
         self.getLatest = function(){
             //get lastest
             $("ul.filters > li").removeClass("active-filter");
             $("li#Lastest").addClass("active-filter");
+            $.ajax({
+                url: url,
+                method: "POST",
+                data: ko.toJSON(getLatest),
+                dataType: 'jason',
+                success: function(data){
+                    self = ko.fromJSON(data);
+                }
+            })
         }
         self.getUser_replied = function(){
             $("ul.filters > li").removeClass("active-filter");
             $("li#Replied").addClass("active-filter");
+            $.ajax({
+                url: url,
+                method: "POST",
+                data: ko.toJSON(getUserReplied),
+                dataType: 'jason',
+                success: function(data){
+                    self = ko.fromJSON(data);
+                }
+            })
         }
 
         self.getRecommended = function(){
