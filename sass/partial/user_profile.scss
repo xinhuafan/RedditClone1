@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans);
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+
+$profile-background: #eeeeee;
+$user-data-width: 14em;
+$comment_widget-width: 100%;
+$comment-widget-padding: 2em;
+$photo-size: 5em;
+
+//TODO: need refactor
+$comment-head-height: 2em;
+$comment-head-color: lighten(#ffe082, 15%);
+$comment-head-border: 1px solid #bbbbbb;
+
+$comment-preview-height: 6em;
+
+body {
+  background-color: #333333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+//body
+
+ul {
+  list-style: none;
+}
+
+.profile {
+  margin: 3em;
+  width: 80%;
+  height: 90%;
+  display: flex;
+  background-color: $profile-background;
+  //padding: 2px
+  box-sizing: content-box;
+  border-radius: 0.4em;
+  & > * {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .user_data {
+    width: $user-data-width;
+    margin-left: 2em;
+    border-right: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+  }
+  //user data
+  .comments_widget {
+    width: $comment_widget-width;
+    padding: $comment-widget-padding;
+    margin-left: 10px;
+  }
+  //comment widget
+}
+
+//profile
+
+.profile_photo {
+  align-self: center;
+  width: $photo-size;
+  height: $photo-size;
+  background-color: black;
+}
+
+.statistic {
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    li {
+      display: flex;
+      p {
+        margin-right: 1em;
+      }
+    }
+  }
+}
+
+.comments_widget {
+  box-sizing: border-box;
+  width: 100%;
+  h2 {
+    font-family: "Oswald", sans-serif;
+  }
+  .comment-view {}
+}
+
+.comment-view {
+  box-sizing: border-box;
+  width: 100%;
+  .comment-view-head {
+    height: $comment-head-height;
+    background: $comment-head-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: $comment-head-border;
+    ul {
+      padding: 0;
+      display: flex;
+      list-style: none;
+      font-family: "Merriweather Sans", sans-serif;
+      margin: 0px;
+      li {
+        max-width: 10em;
+        padding-right: 1em;
+      }
+    }
+    .button-set {
+      height: 100%;
+      display: flex;
+      border-left: 1px solid #aaaaaa;
+      a {
+        width: 2.5em;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      //
+
+    }
+    //
+
+  }
+  //
+}
+
+//
+.comment-show {
+  width: 100%;
+  border: $comment-head-border;
+  box-sizing: border-box;
+  .comment {
+    width: 100%;
+    height: $comment-preview-height;
+    &:nth-child(2n) {
+      background: #ffc107;
+    }
+  }
+}

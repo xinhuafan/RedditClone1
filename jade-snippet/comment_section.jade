@@ -1,9 +1,6 @@
 //
    Created by Qiushuo on 4/22/2016.
 
-//
-   Created by Qiushuo on 4/20/2016.
-
 .thread
     .avatar-back
         .avatar
@@ -19,7 +16,7 @@
                     i.fa.fa-trash
 
         .thread-body
-            p(style='white-space:pre;' data-bind = "_entry")
+            pre(data-bind = "text: _entry")
                 | you know what about it??
                 | you know what about it??
                 | you know what about it??
@@ -80,11 +77,11 @@
             //end of head bar
             .content
                 .comment-view
-                    p(data-bind="text: entry" ).commments something something other thing
+                    pre(data-bind="text: _entry" ).commments something something other thing
                     button.edit_button
                         i.fa.fa-pencil-square-o
                 .edit-view
-                    textarea(data-bind="value: entry" ).text-edit
+                    textarea(data-bind="value: _entry" ).text-edit
                     .submit_buttons
                         button.submit_change submit
                         button.cancel_change cancel
@@ -108,6 +105,6 @@
 .thread_reply
     p#reply-parent reply to thread
     textarea#reply(data-bind = "value: _current_reply, valueUpdate: 'afterkeydown'")
-    .button_box
+    .reply_buttons
         button#submit_comment(data-bind = "click: reply2Thread") submit
         button#reset_comment(data-bind = "click: resetReply") reset

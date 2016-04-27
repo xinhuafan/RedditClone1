@@ -1,5 +1,5 @@
 /* line 11, ../../sass/partial/user_panel.scss */
-.user-control-bar {
+.user_bar {
   box-sizing: border-box;
   width: 100%;
   padding-left: 2em;
@@ -7,14 +7,28 @@
   box-shadow: 0px 2px 4px 1px rgba(10, 10, 10, 0.5);
 }
 /* line 17, ../../sass/partial/user_panel.scss */
-.user-control-bar * {
+.user_bar * {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-/* line 23, ../../sass/partial/user_panel.scss */
-.user-control-bar button {
+
+/* line 36, ../../sass/partial/user_panel.scss */
+.user .head .avatar {
+  width: 2.4em;
+  height: 2.4em;
+  background: black;
+  margin-right: 1em;
+}
+
+/* line 47, ../../sass/partial/user_panel.scss */
+.end .button-set button {
+  margin-right: 1em;
+}
+
+/* line 53, ../../sass/partial/user_panel.scss */
+button.user_bar_button {
   box-sizing: border-box;
   height: 2em;
   padding-left: 0.6em;
@@ -23,18 +37,4 @@
   border-radius: 4px;
   color: white;
   border: none;
-}
-
-/* line 41, ../../sass/partial/user_panel.scss */
-.guest
-.user .head .avatar {
-  width: 2.4em;
-  height: 2.4em;
-  background: black;
-  margin-right: 1em;
-}
-/* line 50, ../../sass/partial/user_panel.scss */
-.guest
-.user .end .button-set button {
-  margin-right: 1em;
 }

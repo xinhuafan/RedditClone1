@@ -27,7 +27,7 @@ p, h1, h2, a {
   font-family: "Lato", sans-serif;
 }
 
-input[type = "text"], input[type = "password"] {
+input.login[type = "text"], input.login[type = "password"] {
   border-radius: 0.3em;
   border: none;
   padding: 0.3em;
@@ -38,7 +38,7 @@ input[type = "text"], input[type = "password"] {
   }
 }
 
-button {
+button.login {
   background-color: #7777ff;
   border: none;
   padding: 0.8em;
@@ -47,8 +47,10 @@ button {
 }
 
 section.fullpage_cover {
-  position: fixed;
+  position: absolute;
   display: flex;
+  top: 0;
+  left: 0;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -79,7 +81,8 @@ section.fullpage_cover {
     padding-left: 0.5em;
     padding-right: 0.5em;
     * {
-      //margin: 0.2 2em;
+      //margin: 0.2 2em
+
     }
   }
   //.head
@@ -219,4 +222,3 @@ button.next {
   margin-top: 0.8em;
 }
 
-.dialog {}

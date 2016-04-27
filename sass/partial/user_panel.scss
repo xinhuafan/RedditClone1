@@ -8,7 +8,7 @@ $user-button-border-radius: 4px;
 $avatar-size: 2.4em;
 
 //style
-.user-control-bar {
+.user_bar {
   box-sizing: border-box;
   width: 100%;
   padding-left: 2em;
@@ -20,21 +20,16 @@ $avatar-size: 2.4em;
     justify-content: space-between;
     align-items: center;
   }
-  button {
-    box-sizing: border-box;
-    height: $user-button-height;
-    padding-left: $user-button-padding;
-    padding-right: $user-button-padding;
-    background: $user-button-color;
-    border-radius: $user-button-border-radius;
-    color: white;
-    border: none;
-  }
+  button {}
 }
 
 //
-
-.guest
+.guest {
+  .head {
+    .id {}
+  }
+  .end {}
+}
 
 .user {
   .head {
@@ -45,13 +40,23 @@ $avatar-size: 2.4em;
       margin-right: 1em;
     }
   }
-  .end {
-     .button-set {
-       button {
-         margin-right: 1em;
-       }
-     }
-   }
 }
 
+.end {
+  .button-set {
+    button {
+      margin-right: 1em;
+    }
+  }
+}
 
+button.user_bar_button {
+  box-sizing: border-box;
+  height: $user-button-height;
+  padding-left: $user-button-padding;
+  padding-right: $user-button-padding;
+  background: $user-button-color;
+  border-radius: $user-button-border-radius;
+  color: white;
+  border: none;
+}
