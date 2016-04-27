@@ -1,7 +1,7 @@
 /**
  * Created by Qiushuo on 4/22/2016.
  */
-(function(){
+var User_Bar = function(){
     var Login_Sates = {
         NOT_LOGIN: 0,
         LOGIN: 1
@@ -30,6 +30,7 @@
         //ko binding
         var user_bar = new user_bar_model(0, "", Login_Sates.NOT_LOGIN);
 
-        ko.applyBindings(user_bar);
+        ko.applyBindings(user_bar, $(".user_bar")[0]);
     })
-})();
+}
+User_Bar();

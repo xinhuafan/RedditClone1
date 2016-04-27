@@ -299,7 +299,7 @@ var Thread = function(){
 
         var cur_thread = new thread_viewmodel("Joe_Doe",undefined, 0, "anything\n to now",comment_list, false, false, undefined);
 
-        ko.applyBindings(cur_thread);
+        ko.applyBindings(cur_thread, $(".thread")[0]);
 
         var testJSON = ko.toJSON(cur_thread);
         console.log(testJSON);
@@ -307,6 +307,8 @@ var Thread = function(){
 
 }
 
+Thread();
+console.log("Thread JS loaded!");
 
 $(document).ready(function(){
     Thread();

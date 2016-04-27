@@ -1,7 +1,7 @@
 /**
  * Created by Qiushuo on 4/22/2016.
  */
-(function(){
+var index_showcase = function(){
     var thread_load_num =10
 
     var getHottest = {
@@ -19,10 +19,6 @@
         num: thread_load_num
     }
 
-    var getUserReplied = {
-        request: "get_Recommanded",
-        num: thread_load_num
-    }
 
     function createThread(title, content){
         var json ="\
@@ -81,6 +77,12 @@
             $("ul.filters > li").removeClass("active-filter");
             $("li#Recommended").addClass("active-filter");
         }
+
+        self.testgetJquery = function(url){
+            $.getJSON(url, function(data){
+                self = ko.fromJSON(data);
+            })
+        }
     }
 
     function Thread_collection(Thread_list){
@@ -124,6 +126,7 @@
     $(document).ready(function(){
         var _isDisplay = 0;
         $(".createThread").hide();
+        $(".createThread > *").hide();
 
         $("a.addThread").click(function(e){
             _isDisplay = 1 ^ _isDisplay;
@@ -134,6 +137,10 @@
             }, 800, function() {
                 // Animation complete.
             });
+            $(".createThread > *").animate({
+                opacity: "toggle"
+            }, 800, function(){
+            })
 
             if(_isDisplay)
                 AnimateRotate(45);
@@ -151,7 +158,8 @@
 
         var main = new main_view("", "", "", threadArray);
 
-        ko.applyBindings(main);
+        ko.applyBindings(main, $("section#main_pade")[0]);
     });
 
-})()
+}
+index_showcase();
