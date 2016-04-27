@@ -64,7 +64,7 @@ var index_showcase = function(){
 
             $.ajax({
                 url: url,
-                method: "POST",
+                method: "GET",
                 data: ko.toJSON(getHottest),
                 dataType: 'jason',
                 success: function(data){
@@ -79,7 +79,7 @@ var index_showcase = function(){
             $("li#Lastest").addClass("active-filter");
             $.ajax({
                 url: url,
-                method: "POST",
+                method: "GET",
                 data: ko.toJSON(getLatest),
                 dataType: 'jason',
                 success: function(data){
@@ -92,7 +92,7 @@ var index_showcase = function(){
             $("li#Replied").addClass("active-filter");
             $.ajax({
                 url: url,
-                method: "POST",
+                method: "GET",
                 data: ko.toJSON(getUserReplied),
                 dataType: 'jason',
                 success: function(data){
