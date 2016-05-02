@@ -1,0 +1,12 @@
+{
+  "Hottest":[
+    "Thread"{
+      "Title": "new day!",
+      "content": "something",
+      "user": "John",
+      "time": "monday",
+      "likes": 10,
+      "replies": 10
+    }
+  ]
+}

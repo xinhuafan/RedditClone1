@@ -75,6 +75,7 @@ var index_showcase = function(){
 
         self.getLatest = function(){
             //get lastest
+            console.log("get lattest");
             $("ul.filters > li").removeClass("active-filter");
             $("li#Lastest").addClass("active-filter");
             $.ajax({

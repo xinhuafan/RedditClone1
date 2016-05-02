@@ -31,10 +31,16 @@ var User_Bar = function(){
         var user_bar = new user_bar_model(0, "", Login_Sates.NOT_LOGIN);
 
         ko.applyBindings(user_bar, $(".user_bar")[0]);
+
+        $("button#login_user").click(function(){
+            //console.log("")
+            $("section.fullpage_cover").toggle();
+        });
+        $("button#signin_user").click(function(){
+            $("section.fullpage_cover").toggle();
+        });
     })
 
-    $("#login").click(function(){
-        $("section.fullpage_cover").toggle();
-    });
+
 }
 User_Bar();

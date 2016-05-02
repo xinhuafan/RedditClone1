@@ -17,7 +17,16 @@
         //alert("Script loaded but not necessarily executed.");
 
     //});
-
+    $("button#login").click(function(){
+        console.log("login!");
+        $("section.fullpage_cover").toggle();
+    })
 
 
 })()
+
+
+$("button#login").click(function(){
+    console.log("login!");
+    $("section.fullpage_cover").toggle();
+})
