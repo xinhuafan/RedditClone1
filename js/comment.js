@@ -41,6 +41,10 @@ var Thread = function(){
         return left._likes == right._likes ? 0 : (left._likes < right._likes ? -1 : 1);
     };
 
+    var sortbytime = function(left, right){
+        return left._posted_time < right._posted_time;
+    }
+
     function pastTime(old_time, current_time){
         var time_last ={
             "second" : " seconds ago",
@@ -95,13 +99,19 @@ var Thread = function(){
         self._user_image_url = user_image;
         self._likes = ko.observable(like);
         self._vote_by = ko.observableArray(voted_users);
+        self._title = ko.observable("");
         self._entry = ko.observable(entry);
+
         self._comment_list = ko.observableArray(comment_list);
         self._authorization;
         self._filter = filter;
         self._order = order;
         self._posted_time;
         self._voted_user = ko.observableArray();
+        //self._canVote = ko.computed(function(){ return (self._voted_user.find(self._user_name) ==undefined);});
+        self.is_deletable = ko.computed(function(){
+            return self._current_user == self._user_name;
+        })
 
         //
         self._current_reply = ko.observable("");
@@ -109,25 +119,26 @@ var Thread = function(){
         self._json = json;
 
         self.updateBackend = function(){
-            var updatedJSON = ko.mapping.toJSON(self);
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: updatedJSON,
-                success: success,
-                dataType: 'json'
-            });
+            //var updatedJSON = ko.mapping.toJSON(self);
+            /*$.ajax({
+             /type: "POST",
+             /url: url,
+             data: updatedJSON,
+             success: success,
+             dataType: 'json'
+             });
+             */
         }
 
         self.reply2Thread = function(){
             var replay_date = new Date();
             var replay_date_string;
-            var reply_content = this._current_reply();
+            var reply_content = self._current_reply();
             console.log(reply_content);
             var current_time = new Date();
-            var reply = new comment_viewmodel(this._current_user, undefined, 0, false, false, reply_content, false, this, current_time)
+            var reply = new comment_viewmodel(self._current_user, undefined, 0, false, false, reply_content, false, this, current_time);
             self._comment_list.push(reply);
-
+            self._current_reply("");
 
             self.updateBackend();
         };
@@ -136,8 +147,8 @@ var Thread = function(){
             var replay_date = new Date();
             var replay_date_string;
             var reply_content;
-            var reply = new comment_viewmodel
-            self._comment_list.push(this._current_user, undefined, 0, false, false, false, reply_content);
+            var reply = new comment_viewmodel;
+            self._comment_list.push(self._current_user, undefined, 0, false, false, false, reply_content);
 
             self.updateBackend();
         };
@@ -164,7 +175,7 @@ var Thread = function(){
         self.reverseSort = function(){
             self._comment_list.reverse();
 
-            self.updateBackend();
+            //self.updateBackend();
         };
         self.deleteComment = function(item){
             //console.log(item);
@@ -178,20 +189,20 @@ var Thread = function(){
             self.updateBackend();
         };
         //load from Json
-        self.loadFromJson = function(){
-            var thread_id = getQueryVariable(id);
-            var request = request_JSON(thread_id);
-            var request_json = ko.toJSON(request)
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: request_json,
-                success: function(data){
-                    self = ko.mapping.fromJSON(data);
-                },
-                dataType: 'json'
-            });
-        };
+        //self.loadFromJson = function(){
+        //var thread_id = getQueryVariable(id);
+        // var request = request_JSON(thread_id);
+        //var request_json = ko.toJSON(request)
+        //$.ajax({
+        //type: "POST",
+        //url: url,
+        //data: request_json,
+        //success: function(data){
+        //self = ko.mapping.fromJSON(data);
+        //},
+        //dataType: 'json'
+        //});
+        //};
 
         self.testLoadJSON = function(){
             var result;
@@ -205,38 +216,47 @@ var Thread = function(){
                 dataType: 'json'
             });
         }
+        //sorting
+        self.sortByTime = function(){
+            self._comment_list.sort(sortbytime);
+        }
+        self.sortByScore = function(){
+            console.log("sort");
+            //self._comment_list.sort(sortbyscore);
+            self._comment_list.sort( function(left, right){ return left._like == right._like ? 0 : (left._like < right._like ? -1 : 1);});
+
+        }
     }
 
 
     function comment_viewmodel(user_id, user_image, like, saved, edit, entry, parent, thread, posted_time){
-        this._id;
-        this._user_name = ko.observable(user_id);
-        this._user_image_url = user_image;
-        this._like = ko.observable(like);
-        this._entry = ko.observable(entry);
-        this._parent = parent;
-        this._thread = thread;
-        this._reply_num = ko.observable(0);
-        this._reply_list = [];
-        this._isedited= ko.observable(false);
-        this._posted_time = posted_time;
-        this._comment_list = ko.observableArray();
-        this._current_time = new Date();
+        var self = this;
+        self._id;
+        self._current_user = "Jack";
+        self._user_name = ko.observable(user_id);
+        self._user_image_url = user_image;
+        self._like = ko.observable(like);
+        self._entry = ko.observable(entry);
+        self._parent = parent;
+        self._thread = thread;
+        self._reply_list = ko.observableArray([]);
+        //this._reply_num = ko.observable(ko.computed(function(){ return this._reply_list().length;}));
+        self._isedited= ko.observable(false);
+        self._editable =  ko.computed(function(){ return self._current_user == self._user_name();});
+        self._posted_time = posted_time;
+        self._comment_list = ko.observableArray();
+        self._current_time = new Date();
         //this._time_past = pastTime(posted_time, this._current_time);
-
-    };
-    comment_viewmodel.prototype = {
-        upvote: function(){
-            this._like(this._like() + 1);
-        },
-        downvote: function(){
+        self.upvote = function(){
+            self._like(self._like() + 1);
+        }
+        self.downvote = function(){
             this._like(this._like() - 1)
-        },
-        deleteComment: function(item){
+        }
+        self.deleteComment = function(item){
             this.comment_list.remove(item);
         }
-    }
-
+    };
 //ko.applyBindings(new comment_model("john smith", "none", 2, false, false, "something you know"));
 
 

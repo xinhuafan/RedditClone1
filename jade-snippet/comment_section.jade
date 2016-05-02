@@ -13,10 +13,11 @@
                 .thread_options
                     a.save
                         i.fa.fa-heart
-                    a.delete
+                    a.delete(data-bind = "visible: is_deletable")
                         i.fa.fa-trash
 
             .thread-body
+                h3 This is title
                 pre(data-bind = "text: _entry")
                     | you know what about it??
                     | you know what about it??
@@ -30,24 +31,26 @@
                     a#thread_downvote(data-bind="click: downvote")
                         i.fa.fa-chevron-down
                 .thread-ultility
-                    a#filter
-                        i.fa.fa-filter
+                    .list_control
+                        a#filter.ultility_button
+                            i.fa.fa-filter
                         ul.filter-types
                             li.low-pointshow low point thread
                             li.recent-days show recent post
-                    a#sort
-                        i.fa.fa-sort
+                    .list_control
+                        a#sort.ultility_button
+                            i.fa.fa-sort
                         ul.sort-types
-                            li.time
+                            li#sortbytime(data-bind = "click: sortByTime")
                                 i.fa.fa-clock-o
                                 p most recent
-                            li.score
+                            li.score(data-bind = "click: sortByScore")
                                 i.fa.fa-thumbs-up
                                 p best
                             li.score
                                 i.fa.fa-comments-o
                                 p most-commented
-                    a#sort-order
+                    a#sort-order.ultility_button(data-bind = "click: reverseSort")
                         i.fa.fa-sort-amount-desc
     .comment-block(data-bind = "foreach: _comment_list")
         .comment
@@ -73,13 +76,13 @@
                             i.fa.fa-share
                         a.hide
                             i.fa.fa-eye-slash
-                        a.delete(href = "#" data-bind = "click: $parent.deleteComment")
+                        a.delete(href = "#" data-bind = "click: $parent.deleteComment, visible: _editable")
                             i.fa.fa-trash
                 //end of head bar
                 .content
                     .comment-view
                         pre(data-bind="text: _entry" ).commments something something other thing
-                        button.edit_button
+                        button.edit_button(data-bind = "visible: _editable")
                             i.fa.fa-pencil-square-o
                     .edit-view
                         textarea(data-bind="value: _entry" ).text-edit
@@ -109,4 +112,3 @@
         .reply_buttons
             button#submit_comment(data-bind = "click: reply2Thread") submit
             button#reset_comment(data-bind = "click: resetReply") reset
-
