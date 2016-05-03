@@ -6,7 +6,8 @@ var index_showcase = function(){
 
     var getHottest = {
         request: "get_Hottest_threads",
-        num: thread_load_num
+        num: thread_load_num,
+        postid: 25
     }
 
     var getLatest = {
@@ -62,24 +63,26 @@ var index_showcase = function(){
             $("ul.filters > li").removeClass("active-filter");
             $("li#Hottest").addClass("active-filter");
 
+            console.log(ko.toJSON(getHottest));
+
             $.ajax({
-                url: url,
+                url: 'http://t5q583.koding.io:1991/ajax/getpost',
                 method: "GET",
-                data: ko.toJSON(getHottest),
+                data: getHottest,
                 dataType: 'jason',
                 success: function(data){
-                    self = ko.fromJSON(data);
+                    //self = ko.fromJSON(data);
+                    alert("get!");
                 }
             })
         }
 
         self.getLatest = function(){
             //get lastest
-            console.log("get lattest");
             $("ul.filters > li").removeClass("active-filter");
             $("li#Lastest").addClass("active-filter");
             $.ajax({
-                url: url,
+                url: 'http://t5q583.koding.io:1991/ajax/getpost',
                 method: "GET",
                 data: ko.toJSON(getLatest),
                 dataType: 'jason',
@@ -92,7 +95,7 @@ var index_showcase = function(){
             $("ul.filters > li").removeClass("active-filter");
             $("li#Replied").addClass("active-filter");
             $.ajax({
-                url: url,
+                url: 'http://t5q583.koding.io:1991/ajax/getpost',
                 method: "GET",
                 data: ko.toJSON(getUserReplied),
                 dataType: 'jason',
@@ -182,8 +185,10 @@ var index_showcase = function(){
 
         //knockout binding
         var thread = new ThreadPreview("News!", "john_smith", 0 , 0);
+        var thread1 = new ThreadPreview("Other!", "Mary Smith", 0 , 0);
         var threadArray = [];
         threadArray.push(thread);
+        threadArray.push(thread1);
 
         var main = new main_view("", "", "", threadArray);
 

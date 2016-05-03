@@ -5,30 +5,30 @@ section#main_pade
     .ultility-bar
         .container
             ul.filters
-                li#Hottest
-                    a
+                li#Hottest.active-filter
+                    a(data-bind = "click: getHottest")
                         i.fa.fa-fire
                         p Hottest
                 li#Lastest
-                    a
+                    a(data-bind = "click: getLatest")
                         i.fa.fa-clock-o
                         p Latest
                 li#Replied
-                    a
+                    a(data-bind = "click: getUser_replied")
                         i.fa.fa-commenting-o
                         p Replied
-                li#Recommented
-                    a
+                li#Recommended
+                    a(data-bind = "click: getRecommended")
                         i.fa.fa-heart
-                        p Recommented
+                        p Recommended
             .addThead_widget
                 a.addThread
                     i.fa.fa-plus
                 .createThread
                     h3 create new thread
-                    p title
+                    p Title
                     input
-                    p content
+                    p Content
                     textarea
                     button submit
     .showcase(data-bind = "foreach: _ThreadList")
