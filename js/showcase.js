@@ -21,15 +21,15 @@ var index_showcase = function(){
     }
 
 
-    function createThread(title, content){
-        var json ="\
-    {\
-      request: 'creat_new_thread',\
-      title: '"+title+"',\
-      content: '"+content+"'\
-    }\
-    ";
-        return json;
+
+
+    function createThread(title, content, post_time, user){
+        this.request = 'creat_new_thread',
+            this.title = title,
+            this.post_content = content;
+        this.post_time = post_time;
+        this.userid = user;
+        this.post_type = 1;
     }
 
     var mininum_threads = 10;
@@ -55,7 +55,20 @@ var index_showcase = function(){
         self._ThreadList = ko.observableArray(threads);
 
         self.CreateThread = function(){
-
+            var posted_time = new Date();
+            var post_time_string = posted_time.toJSON();
+            var creatThreadjson = new createThread(self._title(), self._content(), post_time_string, 12);
+            console.log(ko.toJS(creatThreadjson));
+            $.ajax({
+                url: 'http://t5q583.koding.io:1991/ajax/createpost',
+                method: "GET",
+                data: ko.toJS(creatThreadjson),
+                dataType: 'json',
+                success: function(data, textStatus, jqXHR){
+                    alert("success");
+                    //self = ko.fromJSON(data);
+                }
+            })
         }
 
         self.getHottest = function(){
@@ -66,13 +79,19 @@ var index_showcase = function(){
             console.log(ko.toJSON(getHottest));
 
             $.ajax({
-                url: 'http://t5q583.koding.io:1991/ajax/getpost',
+                url: 'http://t5q583.koding.io:1991/ajax/getposts',
                 method: "GET",
+                crossDomain: true,
                 data: getHottest,
-                dataType: 'jason',
+                dataType: 'json',
                 success: function(data){
+                    //var test =ko.mapping.fromJSON(data);
+                    //alert(ko.toJSON(data));
+                    console.log(test);
                     //self = ko.fromJSON(data);
-                    alert("get!");
+                },
+                jsonpCallBack: function(data){
+                    alert(ko.toJSON(data));
                 }
             })
         }
@@ -82,7 +101,7 @@ var index_showcase = function(){
             $("ul.filters > li").removeClass("active-filter");
             $("li#Lastest").addClass("active-filter");
             $.ajax({
-                url: 'http://t5q583.koding.io:1991/ajax/getpost',
+                url: 'http://t5q583.koding.io:1991/ajax/getposts',
                 method: "GET",
                 data: ko.toJSON(getLatest),
                 dataType: 'jason',
@@ -95,7 +114,7 @@ var index_showcase = function(){
             $("ul.filters > li").removeClass("active-filter");
             $("li#Replied").addClass("active-filter");
             $.ajax({
-                url: 'http://t5q583.koding.io:1991/ajax/getpost',
+                url: 'http://t5q583.koding.io:1991/ajax/getposts',
                 method: "GET",
                 data: ko.toJSON(getUserReplied),
                 dataType: 'jason',
@@ -122,7 +141,7 @@ var index_showcase = function(){
         self._thread_array = Thread_list;
     }
 
-    function ThreadPreview(title, user, reply_num, comments_num){
+    function ThreadPreview(title, user, reply_num, comments_num, content){
         var self = this;
 
         self._thread_id;
@@ -133,6 +152,7 @@ var index_showcase = function(){
         self._link_address = ko.computed(function(){
             return "/comments?id="+self._thread_id;
         },self)
+        self._content = content;
     }
 
     function AnimateRotate(angle) {
@@ -191,6 +211,10 @@ var index_showcase = function(){
         threadArray.push(thread1);
 
         var main = new main_view("", "", "", threadArray);
+
+        //require(['knockout', 'viewModel', 'domReady!'], function(ko, main) {
+            //ko.applyBindings(main, $("section#main_pade")[0]);
+        //});
 
         ko.applyBindings(main, $("section#main_pade")[0]);
     });
