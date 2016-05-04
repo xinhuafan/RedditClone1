@@ -32,12 +32,14 @@ var User_Bar = function(){
 
         ko.applyBindings(user_bar, $(".user_bar")[0]);
 
-        $("button#login_user").click(function(){
+        $("button#Sinup_user ").click(function(){
             //console.log("")
             $("section.fullpage_cover").toggle();
+            $("input#widget_type").prop('checked', true);
         });
-        $("button#signin_user").click(function(){
+        $("button#Signin_user").click(function(){
             $("section.fullpage_cover").toggle();
+            $("input#widget_type").prop('checked', false);
         });
     })
 

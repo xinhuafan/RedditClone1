@@ -30,9 +30,10 @@ p, h1, h2, a {
 input.login[type = "text"], input.login[type = "password"] {
   border-radius: 0.3em;
   border: none;
-  padding: 0.3em;
+  padding-left: 0.3em;
   background: transparent;
   width: $text-input-width;
+  height: 1.4em;
   &:focus {
     outline: none;
   }
@@ -132,6 +133,7 @@ section.fullpage_cover {
 
 .input_back {
   //padding: $text-input-padding
+  height: 1.4em;
   background-color: white;
   width: $text-input-width;
   border-radius: $text-input-radius;

@@ -118,16 +118,17 @@ p, h1, h2, a {
 input.login[type="text"], input.login[type="password"] {
   border-radius: 0.3em;
   border: none;
-  padding: 0.3em;
+  padding-left: 0.3em;
   background: transparent;
   width: 12em;
+  height: 1.4em;
 }
-/* line 36, ../sass/partial/login_panel.scss */
+/* line 37, ../sass/partial/login_panel.scss */
 input.login[type="text"]:focus, input.login[type="password"]:focus {
   outline: none;
 }
 
-/* line 41, ../sass/partial/login_panel.scss */
+/* line 42, ../sass/partial/login_panel.scss */
 button.login {
   background-color: #7777ff;
   border: none;
@@ -136,7 +137,7 @@ button.login {
   width: 100%;
 }
 
-/* line 49, ../sass/partial/login_panel.scss */
+/* line 50, ../sass/partial/login_panel.scss */
 section.fullpage_cover {
   position: absolute;
   display: flex;
@@ -150,7 +151,7 @@ section.fullpage_cover {
   background: rgba(100, 100, 100, 0.4);
 }
 
-/* line 62, ../sass/partial/login_panel.scss */
+/* line 63, ../sass/partial/login_panel.scss */
 .dialog {
   background-color: #eeeeee;
   width: 30em;
@@ -158,7 +159,7 @@ section.fullpage_cover {
   border-radius: 0.4em;
   box-shadow: 0px 20px 80px 5px rgba(100, 100, 100, 0.7);
 }
-/* line 69, ../sass/partial/login_panel.scss */
+/* line 70, ../sass/partial/login_panel.scss */
 .dialog .head {
   font-weight: bolder;
   box-sizing: content-box;
@@ -177,19 +178,19 @@ section.fullpage_cover {
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
-/* line 89, ../sass/partial/login_panel.scss */
+/* line 90, ../sass/partial/login_panel.scss */
 .dialog .dialog-body {
   padding-left: 2em;
   padding-right: 2em;
   margin-top: 1em;
 }
-/* line 93, ../sass/partial/login_panel.scss */
+/* line 94, ../sass/partial/login_panel.scss */
 .dialog .dialog-body a.widget-select {
   padding: 0.3em;
   background-color: white;
   border: 2px solid blue;
 }
-/* line 97, ../sass/partial/login_panel.scss */
+/* line 98, ../sass/partial/login_panel.scss */
 .dialog .dialog-body a.widget-select:first-child {
   -moz-border-radius-topleft: 0.4em;
   -webkit-border-top-left-radius: 0.4em;
@@ -199,7 +200,7 @@ section.fullpage_cover {
   border-bottom-left-radius: 0.4em;
   border-right: none;
 }
-/* line 101, ../sass/partial/login_panel.scss */
+/* line 102, ../sass/partial/login_panel.scss */
 .dialog .dialog-body a.widget-select:last-child {
   -moz-border-radius-topright: 0.4em;
   -webkit-border-top-right-radius: 0.4em;
@@ -208,41 +209,42 @@ section.fullpage_cover {
   -webkit-border-bottom-right-radius: 0.4em;
   border-bottom-right-radius: 0.4em;
 }
-/* line 105, ../sass/partial/login_panel.scss */
+/* line 106, ../sass/partial/login_panel.scss */
 .dialog .dialog-body .input-widget {
   display: flex;
   flex-direction: column;
   align-items: left;
 }
-/* line 109, ../sass/partial/login_panel.scss */
+/* line 110, ../sass/partial/login_panel.scss */
 .dialog .dialog-body .input-widget #signup-widget {
   display: none;
   flex-direction: column;
 }
 
-/* line 122, ../sass/partial/login_panel.scss */
+/* line 123, ../sass/partial/login_panel.scss */
 #signin-widget {
   display: flex;
   flex-direction: column;
 }
-/* line 125, ../sass/partial/login_panel.scss */
+/* line 126, ../sass/partial/login_panel.scss */
 #signin-widget .remember {
   display: flex;
   align-items: center;
 }
 
-/* line 133, ../sass/partial/login_panel.scss */
+/* line 134, ../sass/partial/login_panel.scss */
 .input_back {
+  height: 1.4em;
   background-color: white;
   width: 12em;
   border-radius: 4px;
   display: flex;
 }
-/* line 140, ../sass/partial/login_panel.scss */
+/* line 142, ../sass/partial/login_panel.scss */
 .input_back:focus {
   outline: blue;
 }
-/* line 143, ../sass/partial/login_panel.scss */
+/* line 145, ../sass/partial/login_panel.scss */
 .input_back .input_head {
   min-width: 3em;
   height: 1.4em;
@@ -254,30 +256,30 @@ section.fullpage_cover {
   border-bottom-left-radius: 4px;
 }
 
-/* line 160, ../sass/partial/login_panel.scss */
+/* line 162, ../sass/partial/login_panel.scss */
 input#widget_type {
   opacity: 0;
 }
-/* line 162, ../sass/partial/login_panel.scss */
+/* line 164, ../sass/partial/login_panel.scss */
 input#widget_type[disabled] ~ label {
   background: #aaaaaa;
 }
-/* line 168, ../sass/partial/login_panel.scss */
+/* line 170, ../sass/partial/login_panel.scss */
 input#widget_type:checked ~ label #label-back:before {
   background: #fefefe;
   color: black;
 }
-/* line 172, ../sass/partial/login_panel.scss */
+/* line 174, ../sass/partial/login_panel.scss */
 input#widget_type:checked ~ label #label-back:after {
   background: transparent;
   color: #cccccc;
 }
 
-/* line 182, ../sass/partial/login_panel.scss */
+/* line 184, ../sass/partial/login_panel.scss */
 label#type_label {
   font-family: "Arimo", sans-serif;
 }
-/* line 184, ../sass/partial/login_panel.scss */
+/* line 186, ../sass/partial/login_panel.scss */
 label#type_label #label-back {
   box-sizing: border-box;
   background: #26c6da;
@@ -288,7 +290,7 @@ label#type_label #label-back {
   align-items: center;
   transition: background 0.8s;
 }
-/* line 193, ../sass/partial/login_panel.scss */
+/* line 195, ../sass/partial/login_panel.scss */
 label#type_label #label-back:before {
   box-sizing: border-box;
   content: attr(data-checked);
@@ -301,7 +303,7 @@ label#type_label #label-back:before {
   border-bottom-left-radius: 7px;
   color: #cccccc;
 }
-/* line 205, ../sass/partial/login_panel.scss */
+/* line 207, ../sass/partial/login_panel.scss */
 label#type_label #label-back:after {
   box-sizing: border-box;
   content: attr(data-unchecked);
@@ -315,7 +317,7 @@ label#type_label #label-back:after {
   border-bottom-right-radius: 7px;
 }
 
-/* line 221, ../sass/partial/login_panel.scss */
+/* line 223, ../sass/partial/login_panel.scss */
 button.next {
   margin-top: 0.8em;
 }

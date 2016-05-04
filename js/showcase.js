@@ -20,7 +20,31 @@ var index_showcase = function(){
         num: thread_load_num
     }
 
+    var getRecommanded = {
+        request: "get_Recommended",
+        num: thread_load_num
+    }
 
+
+    function ThreadPreview(id, title, user, reply_num, comments_num, content){
+        var self = this;
+
+        self._thread_id = id;
+        self._title = ko.observable(title);
+        self._submitter = ko.observable(user);
+        self._replies = ko.observable(reply_num);
+        self._comments = ko.observable(comments_num);
+        self._link_address = ko.computed(function(){
+            return "/comment/"+self._thread_id;
+        },self);
+        self._post_time;
+        self._content = content;
+        self.fromJSON = function(json){
+            self._title = json.title;
+            self._content = json.post_content;
+            self._post_time = new Date(json.post_time);
+        }
+    }
 
 
     function createThread(title, content, post_time, user){
@@ -85,14 +109,11 @@ var index_showcase = function(){
                 data: getHottest,
                 dataType: 'json',
                 success: function(data){
-                    //var test =ko.mapping.fromJSON(data);
+                    //self=ko.fromJSON(data);
                     //alert(ko.toJSON(data));
-                    console.log(test);
-                    //self = ko.fromJSON(data);
+                    console.log(ko.toJSON(data));
+                    self.fromJSON( ko.toJS(data) );
                 },
-                jsonpCallBack: function(data){
-                    alert(ko.toJSON(data));
-                }
             })
         }
 
@@ -103,10 +124,12 @@ var index_showcase = function(){
             $.ajax({
                 url: 'http://t5q583.koding.io:1991/ajax/getposts',
                 method: "GET",
-                data: ko.toJSON(getLatest),
-                dataType: 'jason',
+                data: getLatest,
+                dataType: 'json',
                 success: function(data){
-                    self = ko.fromJSON(data);
+                    //alert(ko.toJSON(data));
+                    console.log("log_json");
+                    self.fromJSON( ko.toJS(data) );
                 }
             })
         }
@@ -116,7 +139,7 @@ var index_showcase = function(){
             $.ajax({
                 url: 'http://t5q583.koding.io:1991/ajax/getposts',
                 method: "GET",
-                data: ko.toJSON(getUserReplied),
+                data: getUserReplied,
                 dataType: 'jason',
                 success: function(data){
                     self = ko.fromJSON(data);
@@ -129,10 +152,18 @@ var index_showcase = function(){
             $("li#Recommended").addClass("active-filter");
         }
 
-        self.testgetJquery = function(url){
-            $.getJSON(url, function(data){
-                self = ko.fromJSON(data);
-            })
+        self.fromJSON = function(json){
+            console.log("convert!");
+            console.log(json);
+            var threadlist =[];
+            for(var i = 0; i < json.length; i++){
+                console.log(json[0]);
+                var thread_view = new ThreadPreview(json[i].postid, json[i].title, json[i].post_content, json[i].post_time);
+                //thread_view.fromJSON(json[i]);
+                threadlist.push(thread_view);
+            }
+            //console.log(threadlist);
+            self._ThreadList(threadlist);
         }
     }
 
@@ -141,19 +172,7 @@ var index_showcase = function(){
         self._thread_array = Thread_list;
     }
 
-    function ThreadPreview(title, user, reply_num, comments_num, content){
-        var self = this;
 
-        self._thread_id;
-        self._title = ko.observable(title);
-        self._submitter = ko.observable(user);
-        self._replies = ko.observable(reply_num);
-        self._comments = ko.observable(comments_num);
-        self._link_address = ko.computed(function(){
-            return "/comments?id="+self._thread_id;
-        },self)
-        self._content = content;
-    }
 
     function AnimateRotate(angle) {
         // caching the object for performance reasons
@@ -211,10 +230,7 @@ var index_showcase = function(){
         threadArray.push(thread1);
 
         var main = new main_view("", "", "", threadArray);
-
-        //require(['knockout', 'viewModel', 'domReady!'], function(ko, main) {
-            //ko.applyBindings(main, $("section#main_pade")[0]);
-        //});
+        main.getHottest();
 
         ko.applyBindings(main, $("section#main_pade")[0]);
     });

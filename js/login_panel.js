@@ -111,6 +111,8 @@ var Login_Widget = function(){
 
         });
 
+        $("section.fullpage_cover").hide();
+
         //
         var signin_form = new SigninInfo("","","");
         var signup_form = new SignupInfo("","");
