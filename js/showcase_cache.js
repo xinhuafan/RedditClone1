@@ -1,7 +1,9 @@
 /**
  * Created by Qiushuo on 5/4/2016.
  */
-var index_showcase = function(){
+var index_showcase = function(current_user){
+    var thread_parent = this;
+    thread_parent._current_logined_user = current_user;
     var thread_load_num =10;
 
     var getHottest = {
@@ -59,7 +61,7 @@ var index_showcase = function(){
                     data: getThread,
                     dataType: 'json',
                     success: function(data, textStatus, jqXHR){
-                        alert("success");
+                        //alert("success");
                         //self = ko.fromJSON(data);
                         $('#products').replaceWith(data);
                     }
@@ -110,7 +112,7 @@ var index_showcase = function(){
                 data: ko.toJS(creatThreadjson),
                 dataType: 'json',
                 success: function(data, textStatus, jqXHR){
-                    alert("success");
+                    //alert("success");
                     //self = ko.fromJSON(data);
                 }
             })
@@ -120,7 +122,7 @@ var index_showcase = function(){
                 data: ko.toJS(creatThreadjson),
                 success: function(data){
                     //self = ko.mapping.fromJSON(data);
-                    alert(ko.toJSON(data));
+                    //alert(ko.toJSON(data));
                     self.commentsfromJSON(data);
                 },
                 dataType: 'json'

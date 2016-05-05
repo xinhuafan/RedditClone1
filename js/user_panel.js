@@ -1,7 +1,9 @@
 /**
  * Created by Qiushuo on 4/22/2016.
  */
-var User_Bar = function(){
+var User_Bar = function(user_name){
+    var user_bar = this;
+    user_bar.current_user = user_name;
     var Login_Sates = {
         NOT_LOGIN: 0,
         LOGIN: 1
@@ -28,7 +30,7 @@ var User_Bar = function(){
         }
 
         //ko binding
-        var user_bar = new user_bar_model(0, "", Login_Sates.NOT_LOGIN);
+        var user_bar = new user_bar_model(0, user_bar.current_user, Login_Sates.NOT_LOGIN);
 
         ko.applyBindings(user_bar, $(".user_bar")[0]);
 
@@ -45,4 +47,7 @@ var User_Bar = function(){
 
 
 }
-User_Bar();
+
+var user_name = $("noscript#info").find("p#cuserid").text();
+
+User_Bar(user_name);

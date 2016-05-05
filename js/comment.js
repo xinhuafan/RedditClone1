@@ -1,6 +1,7 @@
-var Thread = function(current_user){
+var Thread = function(current_user, post_id){
     var thread_parent = this;
     thread_parent._current_logined_user = current_user;
+    thread_parent.post_id = post_id;
     this.get_current_user = function(){
         return thread_parent._current_logined_user;};
     function ThreadViewJsonTemplate(id, title, content, comment_list, likes, post_time){
@@ -195,7 +196,7 @@ var Thread = function(current_user){
                 url: 'http://t5q583.koding.io:1991/ajax/updatecomment',
                 data: reply_content,
                 success: function(data){
-                    alert(ko.toJSON(data));
+                    //alert(ko.toJSON(data));
                     //self.fromJSON(data)
                     console.log("success");
                 },
@@ -268,7 +269,7 @@ var Thread = function(current_user){
 
         self.testLoadJSON = function(threadid){
             var result;
-            var request = new request_Thread_JSON(22);
+            var request = new request_Thread_JSON(thread_parent.post_id);
             console.log(ko.toJSON(request));
 
             $.ajax({
@@ -277,7 +278,7 @@ var Thread = function(current_user){
                 data: request,
                 success: function(data){
                     //self = ko.mapping.fromJSON(data);
-                    alert(ko.toJSON(data));
+                    //alert(ko.toJSON(data));
                     self.threadfromJSON(data);
                 },
                 dataType: 'json'
@@ -289,7 +290,7 @@ var Thread = function(current_user){
                 data: request,
                 success: function(data){
                     //self = ko.mapping.fromJSON(data);
-                    alert(ko.toJSON(data));
+                    //alert(ko.toJSON(data));
                     self.commentsfromJSON(data);
                 },
                 dataType: 'json'
@@ -406,5 +407,7 @@ var Thread = function(current_user){
 
 }
 
-Thread("Jaque");
+var user_name = $("noscript#info").find("p#cuserid").text();
+var post_id = $("noscript#info").find("p#cpostid").text();
+Thread(user_name);
 //console.log("Thread JS loaded!");

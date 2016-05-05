@@ -1,5 +1,8 @@
-var index_showcase = function(){
-    var thread_load_num =10
+var index_showcase = function(current_user){
+
+    var index = this;
+    index._current_logined_user = current_user;
+    var thread_load_num =10;
 
     var getHottest = {
         request: "get_Hottest_threads",
@@ -148,7 +151,7 @@ var index_showcase = function(){
         self.CreateThread = function(){
             var posted_time = new Date();
             var post_time_string = posted_time.toJSON();
-            var creatThreadjson = new createThread(self._title(), self._content(), post_time_string, 12);
+            var creatThreadjson = new createThread(self._title(), self._content(), post_time_string, index._current_logined_user);
             console.log(ko.toJS(creatThreadjson));
             $.ajax({
                 url: 'http://t5q583.koding.io:1991/ajax/createpost',
@@ -317,4 +320,6 @@ var index_showcase = function(){
     });
 
 }
-index_showcase();
+
+var user_name = $("noscript#info").find("p#cuserid").text();
+index_showcase(user_name);
