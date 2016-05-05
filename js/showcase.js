@@ -1,7 +1,5 @@
-var index_showcase = function(current_user){
+var index_showcase = function(session_current_user){
 
-    var index = this;
-    index._current_logined_user = current_user;
     var thread_load_num =10;
 
     var getHottest = {
@@ -144,7 +142,7 @@ var index_showcase = function(current_user){
 
 
         //track thread creation
-        self._current_user = index._current_logined_user;
+        self._current_user = session_current_user;
         self._title = ko.observable(title);
         self._content = ko.observable(content);
         self._ThreadList = ko.observableArray(threads);

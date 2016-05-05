@@ -1,9 +1,8 @@
 /**
  * Created by Qiushuo on 4/22/2016.
  */
-var User_Bar = function(user_name){
-    var user_bar = this;
-    user_bar.current_user = user_name;
+var User_Bar = function(session_user_name){
+
     var Login_Sates = {
         NOT_LOGIN: 0,
         LOGIN: 1
@@ -36,7 +35,7 @@ var User_Bar = function(user_name){
         }
 
         //ko binding
-        var user_bar = new user_bar_model(0, user_name, Login_Sates.NOT_LOGIN);
+        var user_bar = new user_bar_model(0, session_user_name, Login_Sates.NOT_LOGIN);
 
         ko.applyBindings(user_bar, $(".user_bar")[0]);
 

@@ -1,7 +1,7 @@
-var Thread = function(current_user, post_id){
-    var thread_parent = this;
-    thread_parent._current_logined_user = current_user;
-    thread_parent.post_id = post_id;
+var Thread = function(session_current_user, seesion_post_id){
+    //var thread_parent = this;
+    //thread_parent._current_logined_user = current_user;
+    //thread_parent.post_id = post_id;
     this.get_current_user = function(){
         return thread_parent._current_logined_user;};
     function ThreadViewJsonTemplate(id, title, content, comment_list, likes, post_time){
@@ -102,7 +102,7 @@ var Thread = function(current_user, post_id){
     function comment_viewmodel(thread_id,user_id, user_image, like, saved, edit, entry, parent, thread, posted_time){
         var self = this;
         self._id;
-        self._current_user = thread_parent._current_logined_user;
+        self._current_user = session_current_user;
         self._user_name = ko.observable(user_id);
         self._user_image_url = ko.observable(user_image);
         self._like = ko.observable(like);
@@ -158,7 +158,7 @@ var Thread = function(current_user, post_id){
         self.AUTHORIZTION_TYPE = ["Guest", "Author", "User"];
         self._id = 0;
         self.model = function(){ this._user = "some one";}
-        self._current_user = thread_parent._current_logined_user;
+        self._current_user = session_current_user;
         self._user_name = ko.observable(user_name);
         self._user_image_url = ko.observable(user_image);
         self._likes = ko.observable(like);
@@ -270,7 +270,7 @@ var Thread = function(current_user, post_id){
 
         self.testLoadJSON = function(threadid){
             var result;
-            var request = new request_Thread_JSON(thread_parent.post_id);
+            var request = new request_Thread_JSON(seesion_post_id);
             console.log(ko.toJSON(request));
 
             $.ajax({
@@ -382,6 +382,9 @@ var Thread = function(current_user, post_id){
             $(".comment-view").css("display", "block");
             $(".edit-view").css("display", "none");
         });
+
+        $("ul.filter-types").toggle();
+        $("ul.sort-types").toggle();
 
 
         var comment_list = [];
