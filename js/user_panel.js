@@ -29,8 +29,14 @@ var User_Bar = function(user_name){
             $(".guest").hide();
         }
 
+
+        var user_name = user_bar.current_user;
+        if(user_bar.current_user == undefined){
+            user_name = "";
+        }
+
         //ko binding
-        var user_bar = new user_bar_model(0, user_bar.current_user, Login_Sates.NOT_LOGIN);
+        var user_bar = new user_bar_model(0, user_name, Login_Sates.NOT_LOGIN);
 
         ko.applyBindings(user_bar, $(".user_bar")[0]);
 
@@ -43,6 +49,11 @@ var User_Bar = function(user_name){
             $("section.fullpage_cover").toggle();
             $("input#widget_type").prop('checked', false);
         });
+
+        if(user_bar.current_user != undefined){
+            $(".user").toggle();
+            $(".guest").toggle();
+        }
     })
 
 

@@ -409,5 +409,10 @@ var Thread = function(current_user, post_id){
 
 var user_name = $("noscript#info").find("p#cuserid").text();
 var post_id = $("noscript#info").find("p#cpostid").text();
-Thread(user_name);
+
+if(user_name == undefined){
+    user_name = "";
+}
+
+Thread(user_name, post_id);
 //console.log("Thread JS loaded!");

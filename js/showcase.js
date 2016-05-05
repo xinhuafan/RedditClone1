@@ -322,4 +322,9 @@ var index_showcase = function(current_user){
 }
 
 var user_name = $("noscript#info").find("p#cuserid").text();
+
+if(user_name == undefined){
+    user_name = "";
+}
+
 index_showcase(user_name);
