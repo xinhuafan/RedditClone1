@@ -35,7 +35,7 @@ var User_Bar = function(session_user_name){
         }
 
         //ko binding
-        var user_bar = new user_bar_model(0, session_user_name, Login_Sates.NOT_LOGIN);
+        var user_bar = new user_bar_model(0, user_name, Login_Sates.NOT_LOGIN);
 
         ko.applyBindings(user_bar, $(".user_bar")[0]);
 
