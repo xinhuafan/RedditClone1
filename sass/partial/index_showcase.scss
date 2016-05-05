@@ -1,3 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400italic);
+
 $head-bar-height: 3em;
 $basic-width: 80em;
 $head-bar-color: #e0f7fa;
@@ -7,16 +13,12 @@ $button-box-shadow: 0px 3px 4px 1px rgba(20, 20, 20, 0.6);
 $filter-color: #ff9800;
 $add-button-size: 2.4em;
 
-$thread-creation-height: 14em;
+$thread-creation-height: 18em;
 $thread-creation-width: 16em;
 $thread-creation-box-shadow: 0px 3px 16px 1px rgba(20, 20, 20, 0.6);
 
 $thread-height: 10em;
 $thread-box-shadow: 0px 3px 10px 1px rgba(20, 20, 20, 0.6);
-
-a, a:hover{
-  text-decoration: none;
-}
 
 section#main_pade {
   display: flex;
@@ -43,13 +45,17 @@ section#main_pade {
       margin: 0;
       height: 100%;
       li {
-        padding-left: 1em;
+        //padding-left: 1em
         height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         background: $filter-color;
+        transform-origin: center bottom;
+        transition: transform 0.3s;
+        font-family: "Droid Sans", sans-serif;
+        &:hover {}
         a {
           display: flex;
           align-items: center;
@@ -71,7 +77,8 @@ section#main_pade {
       li.active-filter {
         @extend li;
         transform-origin: center bottom;
-        transform: scaleY(1.2);
+        transform: scale(1.2);
+        box-shadow: 0px 0px 3px 1px rgba(10, 20, 10, 0.4);
       }
     }
     //ul
@@ -89,7 +96,7 @@ section#main_pade {
       justify-content: center;
       align-items: center;
       color: white;
-      z-index: 10;
+      z-index: 2001;
       box-shadow: $button-box-shadow;
     }
     .createThread {
@@ -102,6 +109,7 @@ section#main_pade {
       box-sizing: border-box;
       padding: 1em;
       box-shadow: $thread-creation-box-shadow;
+      z-index: 2000;
       h3 {
         margin: 0.3em;
       }
@@ -119,22 +127,40 @@ section#main_pade {
   align-self: center;
   padding-top: 0.4em;
   .showcase-item {
-    height: $thread-height;
+    position: relative;
+    min-height: $thread-height;
     width: 100%;
     background: white;
     //border: 2px solid black
     box-sizing: border-box;
-    padding: 0.7em;
+    //padding: 0.7em
     box-shadow: $thread-box-shadow;
     margin-top: 0.6em;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10;
     h2 {
+      font-family: "Oswald", sans-serif;
       margin: 0.2em;
+      margin-left: 0.4em;
+      margin-top: 1em;
     }
     p {
       margin: 0.1em;
+      margin-left: 0.4em;
+      font-family: "Ubuntu", sans-serif;
     }
     .thread-info {
+      //position: absolute
+      width: 100%;
+      //bottom: 0
       display: flex;
+      box-sizing: border-box;
+      padding-bottom: 1em;
+      padding-top: 1em;
       p {
         margin-right: 1em;
       }
