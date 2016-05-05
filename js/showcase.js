@@ -84,7 +84,7 @@ var index_showcase = function(){
         self._replies = ko.observable(reply_num);
         self._comments = ko.observable(comments_num);
         self._link_address = ko.computed(function(){
-            return "/post/?id="+self._thread_id;
+            return "post/comments/?id="+self._thread_id;
         },self);
         self._post_time = new Date(posted_time);
         self._content = content;
@@ -170,7 +170,7 @@ var index_showcase = function(){
             console.log(ko.toJSON(getHottest));
 
             $.ajax({
-                url: 'http://t5q583.koding.io:1991/ajax/gethettestposts',
+                url: 'http://t5q583.koding.io:1991/ajax/gethottestposts',
                 method: "GET",
                 crossDomain: true,
                 data: getHottest,
@@ -192,7 +192,7 @@ var index_showcase = function(){
             $("ul.filters > li").removeClass("active-filter");
             $("li#Lastest").addClass("active-filter");
             $.ajax({
-                url: 'http://t5q583.koding.io:1991/ajax/getpostsGTGT',
+                url: 'http://t5q583.koding.io:1991/ajax/getlattestposts',
                 method: "GET",
                 data: getLatest,
                 dataType: 'json',
@@ -220,6 +220,17 @@ var index_showcase = function(){
         self.getRecommended = function(){
             $("ul.filters > li").removeClass("active-filter");
             $("li#Recommended").addClass("active-filter");
+            $.ajax({
+                url: 'http://t5q583.koding.io:1991/ajax/getlattestposts',
+                method: "GET",
+                data: getLatest,
+                dataType: 'json',
+                success: function(data){
+                    alert(ko.toJSON(data));
+                    console.log("log_json");
+                    self.fromJSON( ko.toJS(data) );
+                }
+            })
         }
 
         self.fromJSON = function(json){
@@ -300,7 +311,7 @@ var index_showcase = function(){
         threadArray.push(thread1);
 
         var main = new main_view("", "", "", threadArray);
-        //main.getHottest();
+        main.getHottest();
 
         ko.applyBindings(main, $("section#main_pade")[0]);
     });
