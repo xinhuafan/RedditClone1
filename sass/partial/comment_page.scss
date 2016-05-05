@@ -32,12 +32,12 @@ $joint-size: 2.4em;
 $joint-inner-size: 1.5em;
 
 //comment head
-$comment-head-height: 2.4em;
+$comment-head-height: 3em;
 $comment-head-color: #29b6f6;
 $comment-time-color: #eeeeee;
 
 $reply-height: 8em;
-$reply-width: 34em;
+$reply-width: 40em;
 
 @mixin square-size($size) {
   height: $size;
@@ -45,6 +45,12 @@ $reply-width: 34em;
 }
 
 //style -------------
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 textarea {
   resize: none;
@@ -200,7 +206,7 @@ a#filter, a#sort, a#sort-order {
   &::before {
     position: absolute;
     content: "";
-    border-left: 2px solid black;
+    border-left: 2px solid #777777;
     height: 100%;
   }
 }
@@ -216,9 +222,14 @@ a#filter, a#sort, a#sort-order {
     height: $avatar-size;
     width: $avatar-size;
     background-color: white;
-    border: 1px solid black;
+    //border: 1px solid black
+    box-shadow: 0 0 10px 3px rgba(10, 10, 10, 0.5);
     border-radius: 50%;
-    img.pic {}
+    img.pic {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
     .pos {
       position: absolute;
       top: $avatar-border;
@@ -317,6 +328,7 @@ a#filter, a#sort, a#sort-order {
     }
     .button_collection {
       position: absolute;
+      top: 8px;
       right: 60px;
       width: 10%;
       display: flex;
@@ -392,7 +404,7 @@ a#filter, a#sort, a#sort-order {
       box-sizing: border-box;
       margin-top: 0.5em;
       height: 3em;
-      width: 100%;
+      width: 80%;
     }
     .submit_buttons {
       align-self: flex-end;

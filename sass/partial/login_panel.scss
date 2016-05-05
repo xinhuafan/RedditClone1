@@ -30,10 +30,9 @@ p, h1, h2, a {
 input.login[type = "text"], input.login[type = "password"] {
   border-radius: 0.3em;
   border: none;
-  padding-left: 0.3em;
+  padding: 0.3em;
   background: transparent;
   width: $text-input-width;
-  height: 1.4em;
   &:focus {
     outline: none;
   }
@@ -133,11 +132,11 @@ section.fullpage_cover {
 
 .input_back {
   //padding: $text-input-padding
-  height: 1.4em;
   background-color: white;
   width: $text-input-width;
   border-radius: $text-input-radius;
   //box-shadow: inset 2px 2px 5px 2px rgba(20,20,20,0.3)
+  height: 1.4em;
   display: flex;
   &:focus {
     outline: blue;
@@ -220,7 +219,38 @@ label#type_label {
 }
 
 //
-button.next {
+button#Signup {
   margin-top: 0.8em;
 }
 
+.feed-back {
+  border-radius: 5px;
+  background: #ef9a9a;
+  box-sizing: border-box;
+  padding-left: 0.4em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.4em;
+  & > i {
+    color: #c62828;
+  }
+}
+
+.alert {
+  margin: 0;
+  margin-left: 0.3em;
+}
+
+.warning {
+  @extend .feed-back;
+  background: #fff9c4;
+  & > i {
+    color: #ffeb3b;
+  }
+  p {
+    margin: 0;
+    margin-left: 0.3em;
+  }
+}

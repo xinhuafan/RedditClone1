@@ -1,5 +1,8 @@
+/**
+ * Created by Qiushuo on 5/4/2016.
+ */
 var index_showcase = function(){
-    var thread_load_num =10
+    var thread_load_num =10;
 
     var getHottest = {
         request: "get_Hottest_threads",
@@ -18,101 +21,52 @@ var index_showcase = function(){
     }
 
     var getRecommanded = {
-        request: "get_Recommended",
-        num: thread_load_num
-    }
-
-    function pastTime(old_time, current_time){
-        var time_last ={
-            second : " seconds ago",
-            minute : " mintes ago",
-            hour: " hours ago",
-            day: " days ago",
-            month: " monthes ago",
-            year: "years ago",
-            second_offset: 6,
-            mintes_offset: 5
-        };
-
-
-        var result;
-
-        var differ;
-
-        if(old_time.getFullYear()!= current_time.getFullYear()){
-            var year_differ = current_time.getFullYear() - old_time.getFullYear();
-            differ = year_differ;
-            result = year_differ + time_last.year;
-        }
-        else if(old_time.getMonth()!=current_time.getMonth()){
-            var month_differ = current_time.getMonth() - old_time.getMonth();
-            differ = month_differ;
-            result = month_differ + time_last.month;
-        }
-        else if(old_time.getDay()!=current_time.getDay()){
-            var day_differ = current_time.getDay()- old_time.getDay();
-            differ = day_differ;
-            result = day_differ + time_last.day;
-        }
-        else if(old_time.getHours()!=current_time.getHours()){
-            var hour_differ = current_time.getHours() - old_time.getHours();
-            differ = hour_differ;
-            result = hour_differ + time_last.hour;
-        }
-        else if(old_time.getMinutes()!=current_time.getMinutes()){
-            var minutes_differ = current_time.getMinutes() - old_time.getMinutes();
-            differ = minutes_differ;
-            result = minutes_differ + time_last.mintue;
-        }
-        else{
-            differ = 0;
-            result = "0 minutes ago";
+            request: "get_Recommended",
+            num: thread_load_num
         }
 
-        return result;
-        //return time_last.hour;
-    }
+        -
 
 
 
-    function ThreadPreview(id, title, user, reply_num, comments_num, content, posted_time){
-        var self = this;
+        function ThreadPreview(id, title, user, reply_num, comments_num, content, posted_time){
+            var self = this;
 
-        self._thread_id = id;
-        self._title = ko.observable(title);
-        self._submitter = ko.observable(user);
-        self._replies = ko.observable(reply_num);
-        self._comments = ko.observable(comments_num);
-        self._link_address = ko.computed(function(){
-            return "/post/?id="+self._thread_id;
-        },self);
-        self._post_time = new Date(posted_time);
-        self._content = content;
-        self.current_time = new Date();
-        self._past_time = ko.computed (function(){
-            return pastTime(self._post_time, self.current_time);
-        })
-        self.fromJSON = function(json){
-            self._title = json.title;
-            self._content = json.post_content;
-            self._post_time = new Date(json.post_time);
-        }
-        self.getThread = function(){
-            var getThread;
-            $.ajax({
-                url: url,
-                method: "GET",
-                data: getThread,
-                dataType: 'json',
-                success: function(data, textStatus, jqXHR){
-                    alert("success");
-                    //self = ko.fromJSON(data);
-                    $('#products').replaceWith(data);
-                }
+            self._thread_id = id;
+            self._title = ko.observable(title);
+            self._submitter = ko.observable(user);
+            self._replies = ko.observable(reply_num);
+            self._comments = ko.observable(comments_num);
+            self._link_address = ko.computed(function(){
+                return "/post?id="+self._thread_id;
+            },self);
+            self._post_time = new Date(posted_time);
+            self._content = content;
+            self.current_time = new Date();
+            self._past_time = ko.computed (function(){
+                return pastTime(self._post_time, self.current_time);
             })
+            self.fromJSON = function(json){
+                self._title = json.title;
+                self._content = json.post_content;
+                self._post_time = new Date(json.post_time);
+            }
+            self.getThread = function(){
+                var getThread;
+                $.ajax({
+                    url: url,
+                    method: "GET",
+                    data: getThread,
+                    dataType: 'json',
+                    success: function(data, textStatus, jqXHR){
+                        alert("success");
+                        //self = ko.fromJSON(data);
+                        $('#products').replaceWith(data);
+                    }
+                })
 
+            }
         }
-    }
 
 
     function createThread(title, content, post_time, user){
@@ -160,7 +114,20 @@ var index_showcase = function(){
                     //self = ko.fromJSON(data);
                 }
             })
+            $.ajax({
+                type: "GET",
+                url: 'http://t5q583.koding.io:1991/ajax/getcommentsbypostGT',
+                data: ko.toJS(creatThreadjson),
+                success: function(data){
+                    //self = ko.mapping.fromJSON(data);
+                    alert(ko.toJSON(data));
+                    self.commentsfromJSON(data);
+                },
+                dataType: 'json'
+            });
         }
+
+
 
         self.getHottest = function(){
             //get hottest
@@ -170,21 +137,18 @@ var index_showcase = function(){
             console.log(ko.toJSON(getHottest));
 
             $.ajax({
-                url: 'http://t5q583.koding.io:1991/ajax/gethettestposts',
+                url: 'http://t5q583.koding.io:1991/ajax/getposts',
                 method: "GET",
                 crossDomain: true,
                 data: getHottest,
                 dataType: 'json',
                 success: function(data){
                     //self=ko.fromJSON(data);
-                    alert(ko.toJSON(data));
+                    //alert(ko.toJSON(data));
                     console.log(ko.toJSON(data));
                     self.fromJSON( ko.toJS(data) );
                 },
-            });
-
-            var post_id_list = [];
-
+            })
         }
 
         self.getLatest = function(){
@@ -192,7 +156,7 @@ var index_showcase = function(){
             $("ul.filters > li").removeClass("active-filter");
             $("li#Lastest").addClass("active-filter");
             $.ajax({
-                url: 'http://t5q583.koding.io:1991/ajax/getpostsGTGT',
+                url: 'http://t5q583.koding.io:1991/ajax/getposts',
                 method: "GET",
                 data: getLatest,
                 dataType: 'json',
@@ -228,12 +192,16 @@ var index_showcase = function(){
             var threadlist =[];
             for(var i = 0; i < json.length; i++){
                 console.log(json[0]);
-                var thread_view = new ThreadPreview(json[i].postid, json[i].title, json[i].username, json[i].count, json[i].post_time, json[i].post_content, json[i].post_time);
+                var thread_view = new ThreadPreview(json[i].postid, json[i].title, json[i].username, 0, json[i].post_time, json[i].post_content, json[i].post_time);
                 //thread_view.fromJSON(json[i]);
                 threadlist.push(thread_view);
             }
             //console.log(threadlist);
             self._ThreadList(threadlist);
+        }
+
+        self.setReplyNumbers = function(data){
+
         }
     }
 
@@ -300,7 +268,7 @@ var index_showcase = function(){
         threadArray.push(thread1);
 
         var main = new main_view("", "", "", threadArray);
-        //main.getHottest();
+        main.getHottest();
 
         ko.applyBindings(main, $("section#main_pade")[0]);
     });

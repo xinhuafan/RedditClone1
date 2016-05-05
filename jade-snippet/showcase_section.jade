@@ -36,9 +36,10 @@ section#main_pade
             .head_up
                 h2(data-bind = "text: _title") something
                 p(data-bind = "text: _submitter") by someone
-            p other
+            p(data-bind = "text: _content") other
             .thread-info
-                p replies
+                p(data-bind = "text: _past_time")
+                p likes
                 p(data-bind = "text: _replies")
                 p comments
                 p(data-bind = "text: _comments")
