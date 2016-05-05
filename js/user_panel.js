@@ -29,8 +29,8 @@ var User_Bar = function(session_user_name){
         }
 
 
-        var user_name = user_bar.current_user;
-        if(user_bar.current_user == undefined){
+        var user_name = session_user_name;
+        if(session_user_namer == undefined){
             user_name = "";
         }
 
