@@ -173,8 +173,9 @@ var Thread = function(current_user, post_id){
         self._current_time;
         self._posted_time = new Date(posted_time);
         self._past_time = ko.computed(function(){
-
+            return pastTime(self._posted_time, self._current_time);
         })
+        self.canCreatePost = ko.computed(function(){return self._current_user!= "";})
         self._voted_user = ko.observableArray();
         //self._canVote = ko.computed(function(){ return (self._voted_user.find(self._user_name) ==undefined);});
         self.is_deletable = ko.computed(function(){

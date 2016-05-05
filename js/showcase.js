@@ -144,9 +144,11 @@ var index_showcase = function(current_user){
 
 
         //track thread creation
+        self._current_user = index._current_logined_user;
         self._title = ko.observable(title);
         self._content = ko.observable(content);
         self._ThreadList = ko.observableArray(threads);
+        self.canCreatePost = ko.computed(function(){return self._current_user!= "";})
 
         self.CreateThread = function(){
             var posted_time = new Date();
